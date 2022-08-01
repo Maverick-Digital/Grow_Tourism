@@ -51,6 +51,8 @@ const Filter = () => {
           if (isEmpty(listingCategories)) {
             selected = false;
           }
+        } else {
+          selected = false;
         }
       }
 
@@ -63,6 +65,8 @@ const Filter = () => {
           if (isEmpty(listingLevels)) {
             selected = false;
           }
+        } else {
+          selected = false;
         }
       }
 
