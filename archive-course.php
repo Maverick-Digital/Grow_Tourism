@@ -22,8 +22,12 @@ if ( have_posts() ) :
 		?>
 	</h1>
 </header>
+<script type="text/javascript">
+window.FiltersTaxonomy = <?php echo getFilteredOptionsTaxonomy(); ?>;
+window.ListingsTaxonomy = <?php echo getFilterListingsByTaxonomy(); ?>;
+</script>
+<div id="course-div"></div>
 <?php
-	get_template_part( 'archive', 'loop_for_course' );
 else :
 	// 404.
 	get_template_part( 'content', 'none' );
