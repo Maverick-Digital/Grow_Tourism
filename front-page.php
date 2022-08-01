@@ -6,7 +6,10 @@
  *
  */
 
+
+ 
 get_header(); ?>
+
 
 
 
@@ -43,7 +46,7 @@ get_header(); ?>
                     <a class="text-decoration-underline btn" href="#">Meet our Founders <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-           
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonialsHome" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -132,18 +135,17 @@ get_header(); ?>
     <div class="container py-5">
         <div class="row">
             <div class="col-md-4">
-                <h1>Build your<br><strong>own syllabus</strong></h1>
+                <h1 class="fw-normal">Build your<br><strong>own syllabus</strong></h1>
                 <p>
                     Lorem ipsum dolor sit amet, contetur adipiscing elit, sed eiusmod tempo. Ut enim ad minima veniam quisomo nostrum exercitationem ullam corpor.
                 </p>
-                <button type="button" class="btn btn-primary btn-lg rounded-pill">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-primary btn-lg rounded-pill mt-2">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 finder-options">
                         <h4>I am a...</h4>
-                        <div class="d-grid gap-3">
-
+                        <div class="d-grid gap-2">
                             <input type="checkbox" class="btn-check" id="btn-check-outlined1" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btn-check-outlined1">New tourism proffesional</label>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined2" autocomplete="off">
@@ -154,9 +156,9 @@ get_header(); ?>
                             <label class="btn btn-outline-primary" for="btn-check-outlined4">Manager with a team</label>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 finder-options">
                         <h4>Trying to...</h4>
-                        <div class="d-grid gap-3">
+                        <div class="d-grid gap-2">
 
                             <input type="checkbox" class="btn-check" id="btn-check-outlined5" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btn-check-outlined5">Upskill my team</label>
@@ -167,18 +169,19 @@ get_header(); ?>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined8" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btn-check-outlined8">Take on 2023</label>
                         </div>
-                        <p class="text-end"><a class="text-decoration-underline btn" href="#">Start building <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+                        
                     </div>
                 </div>
+                <p class="text-end"><a class="text-decoration-underline btn mt-2" href="#">Start building <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
             </div>
         </div>
     </div>
 </div>
-<div class="features bg-primary bg-gradient text-white">
+<div class="features bg-primary background-gradiant text-white">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h1>Features</h1>
+                <h1 class="">Features</h1>
                 <p>Lorem ipsum dolor sit amet, contetur adipiscing elit, sed eiusmod tempo. Ut enim ad minima veniam quisomo nostrum exercitationem.</p>
                 <ul>
                     <li>Duis aute irure dolor in reprehenderit in voluptate</li>
@@ -187,9 +190,9 @@ get_header(); ?>
                     <li>Duis aute irure dolor in reprehenderit in voluptate</li>
                     <li>Duis aute irure dolor in reprehenderit in voluptate</li>
                 </ul>
-                <button type="button" class="btn btn-light btn-lg rounded-pill">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-light btn-lg rounded-pill mt-2">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
-            <div class="col-md-6">
+            <div  data-aos="fade-up" class="col-md-6">
                 <img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/feature.png" alt="" srcset="">
             </div>
         </div>
@@ -198,8 +201,8 @@ get_header(); ?>
 
 <div class="post-grid">
     <div class="container pt-5">
-        <h1 class="text-primary">High-value <strong>tourism in action</strong></h1>
-        
+        <h1 class="text-primary fw-normal">High-value <strong>tourism in action</strong></h1>
+
         <?php echo do_shortcode('[bs-isotope-equal-height type="isotope" tax="isotope_category" cat_parent="49"]'); ?>
 
         <a class="text-decoration-underline btn" href="#">Start building <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -208,22 +211,22 @@ get_header(); ?>
 
 <div class="counter-grid">
     <div class="container py-5 text-center text-primary">
-        <h1>Are you ready for the future</h1>
+        <h1 class="fw-normal">Are you ready <strong>for the future</strong></h1>
         <p>Why HVT solves all of this lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud.</p>
-        <div class="row">
-            <div class="col-3">
+        <div  data-aos="fade-up" class="row counters pt-2">
+            <div class="col-md-3 counter px-3">
                 <h2>89%</h2>
                 <small>of business struggle retaining good staff</small>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 counter px-3">
                 <h2>1 in 3</h2>
                 <small>businesses have a sustainability framework</small>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 counter px-3">
                 <h2>4M+</h2>
                 <small>potential NZ travellers are looking for high-value experiences</small>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 counter px-3">
                 <h2>200k</h2>
                 <small>Excepteur sint occaecat cupidat at non proident.</small>
             </div>
@@ -233,13 +236,14 @@ get_header(); ?>
 
 <div class="join-us">
     <div class="row g-0">
-        <div class="col-md-6">
+        <div class="col-md-6 background-gradiant">
             <div class="join-us-form p-2 p-md-3 p-lg-4 text-white">
-                <h1>Join the movement</h1>
-                <p>Sign up and be a part of the Grow Tourism movement. Launching August 1, 2022.</p>
-                <?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+                <h1 class="fw-normal">Join the <strong> movement</strong></h1>
+                <p>Sign up and be a part of the Grow Tourism movement. <strong>Launching August 1, 2022.</strong></p>
+                <div class="from-wrapper mt-3">
+                    <?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+                </div>
             </div>
-
         </div>
         <div class="col-md-6" style="background-image:url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/contact-Image.png);background-size: cover;background-repeat: no-repeat;">
         </div>

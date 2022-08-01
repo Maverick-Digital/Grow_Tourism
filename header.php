@@ -154,9 +154,11 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 							</a>
 							<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 						</div>
-						<div class="offcanvas-body">
-							<div>
-								Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+						<div class="offcanvas-body pt-0">
+							<div class="mb-3">
+								<p>
+								Grow Tourism is equipping a workforce with the skills, insights and knowledge to build New Zealand’s high value tourism future.
+								</p>
 							</div>
 							<?php
 							// Loading WordPress Custom Menu (theme_location).
@@ -165,8 +167,8 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 									'theme_location' => 'offcanvas-menu',
 									'container'      => '',
 									'menu_class'     => 'navbar-nav me-auto',
-
-
+									'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+									'walker'         => new WP_Bootstrap_Navwalker(),
 								)
 							);
 

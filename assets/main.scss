@@ -229,6 +229,7 @@ header {
     rgba(112, 85, 170, 1) 0%,
     rgba(154, 92, 140, 1) 100%
   );
+  z-index: 3;
   .btn-outline-light {
     color: #fff;
   }
@@ -237,11 +238,13 @@ header {
   }
   &::after{
     content: '';
-    background: url();
+    background: url(http://grow-tourism.local/wp-content/uploads/2022/08/overlay-pattern.png);
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
+    left: 0;
+    z-index: -1;
   }
 }
 .background-gradiant-header {
@@ -253,7 +256,9 @@ header {
   );
   a {
     color: #fff;
+  
   }
+
 }
 #menu-main-menue {
   li {
@@ -275,6 +280,13 @@ header {
 .hero-images {
   background: rgb(112, 85, 170);
   background: linear-gradient(180deg, rgba(112, 85, 170, 0) 0%, $white 100%);
+}
+
+//off canvas menue
+.offcanvas-body{
+#menu-off-canvas-menu{
+
+}
 }
 
 //testimonial
@@ -518,18 +530,71 @@ header {
 
 // home page
 .join-us {
+  h1{
+    strong{
+      font-weight: 700;
+    }
+  }
   label {
     display: none !important;
   }
-  .join-us-form {
-    background: rgb(112, 85, 170);
-    background: linear-gradient(
-      90deg,
-      rgba(112, 85, 170, 1) 0%,
-      rgba(154, 92, 140, 1) 100%
-    );
+  // .join-us-form {
+  //   background: rgb(112, 85, 170);
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgba(112, 85, 170, 1) 0%,
+  //     rgba(154, 92, 140, 1) 100%
+  //   );
+  // }
+  .home-page-form{
+    ::placeholder {
+      font-weight: 200;
+      color: $blue;
+    }
+    input{
+      border: none;
+      margin-bottom: 20px;
+      color: $blue;
+    }
+    .button{
+    border-radius: 25px;
+    padding: 8px 16px;
+    font-weight: 500;
+    color: $blue;
+    }
   }
 }
+
+.syllabus {
+h1{
+  strong{
+    font-weight: 700;
+  }
+}
+.finder-options{
+  .btn{
+    font-weight: 300;
+  }
+}
+}
+
+.features{
+  ul{
+    li{
+      line-height: normal;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      font-size: small;
+      // list-style-type: "\1F44D"; // thumbs up sign
+      &::marker{
+        content: "\f00c"; /* FontAwesome Unicode */
+        font-family: FontAwesome;
+        display: inline-block;
+      }
+    }
+  }
+}
+
 .floter {
   position: absolute;
   width: 100%;
@@ -542,7 +607,13 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 .post-grid {
+  h1{
+    strong{
+      font-weight: 700;
+    } 
+  }
   height: fit-content;
   .filters {
     text-align: right;
@@ -560,6 +631,25 @@ header {
     color: $blue;
   }
 }
+
+.counter-grid{
+  h1{
+    strong{
+      font-weight: 700;
+    }
+  }
+  .counter{
+    border-right: 2px solid $blue;
+    &:last-child{
+      border: none;
+    }
+    h2{
+      font-weight: 800;
+      margin-bottom: 0;
+    }
+  }
+}
+
 
 // course page
 
