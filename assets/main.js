@@ -1,8 +1,24 @@
 // Webpack Imports
+import React from 'react';
+import {createRoot} from "react-dom/client";
 import * as bootstrap from 'bootstrap';
+import Filter from './scripts/modules/filter';
+
+import './main.scss';
 
 ( function () {
 	'use strict';
+
+	window.addEventListener("load", async () => {
+
+		const courseDiv  = document.getElementById('course-div');
+		if  (typeof(courseDiv) != 'undefined' && courseDiv != null){
+			const courseDivRoot = createRoot(courseDiv);
+			courseDivRoot.render(
+				<Filter />
+			);
+		}
+	});
 
 	// Focus input if Searchform is empty
 	[].forEach.call( document.querySelectorAll( '.search-form' ), ( el ) => {
