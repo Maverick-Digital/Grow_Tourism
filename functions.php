@@ -532,7 +532,7 @@ function grow_tourism_scripts_loader() {
 	}
 
 	// 2. Scripts.
-	wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/main.js' ), array(), $theme_version, true );
+	wp_enqueue_script( 'mainjs', get_theme_file_uri( 'dist/main.js' ));
 	wp_enqueue_script( 'splidejs', get_theme_file_uri( 'assets/js/splide.min.js' ));
 	wp_enqueue_script( 'masonaryjs', get_theme_file_uri( 'assets/js/masonry-docs.min.js' ));
 	wp_enqueue_script( 'customjs', get_theme_file_uri( 'assets/js/custom-script.js' ));
@@ -560,89 +560,89 @@ function change_isotope_slug( $args, $post_type ) {
 
  remove_filter ('the_excerpt', 'wpautop');
 
- // FILTER PAGE
+// FILTER PAGE
 /**
  * List all of te filters options and pass as a json object
  *
  * @return json
  */
 function getFilteredOptionsTaxonomy()
-{
+ {
 
-	 $pillars = get_terms([
-		 'taxonomy' => 'pillar',
-		 'hide_empty' => false,
-	 ]);
+    $pillars = get_terms([
+			'taxonomy' => 'pillar',
+			'hide_empty' => false,
+		]);
 
-	 $category = [];
-	 foreach ($pillars as $item) {
-		 $category[] = [
-			 'id' => $item->term_id,
-			 'title' => $item->name,
-		 ];
-	 }
+		$category = [];
+		foreach ($pillars as $item) {
+			$category[] = [
+				'id' => $item->term_id,
+				'title' => $item->name,
+			];
+		}
 
-	 $levels = get_terms([
-		 'taxonomy' => 'level',
-		 'hide_empty' => false,
-	 ]);
+    $levels = get_terms([
+			'taxonomy' => 'level',
+			'hide_empty' => false,
+		]);
 
-	 $level = [];
-	 foreach ($levels as $item) {
-		 $level[] = [
-			 'id' => $item->term_id,
-			 'title' => $item->name,
-		 ];
-	 }
+		$level = [];
+		foreach ($levels as $item) {
+			$level[] = [
+				'id' => $item->term_id,
+				'title' => $item->name,
+			];
+		}
 
-	 $options = [];
-	 $options['level'] = $level;
-	 $options['category'] = $category;
+		$options = [];
+		$options['level'] = $level;
+		$options['category'] = $category;
 
-	 return json_encode($options);
-}
+		return json_encode($options);
+ }
 
-/**
-* List all of the courses and convert into json object 
-*
-* @return json
-*/
-function getFilterListingsByTaxonomy()
-{
+ /**
+ * List all of the courses and convert into json object 
+ *
+ * @return json
+ */
+ function getFilterListingsByTaxonomy()
+ {
 
-	 $list = get_posts([
-		 'numberposts' => 99999,
-		 'post_type' => 'course',
-		 'sort_column' => 'menu_order',
-		 'orderby' => 'desc',
-		 'post_parent' => 0,
-	 ]);
+    $list = get_posts([
+      'numberposts' => 99999,
+      'post_type' => 'course',
+      'sort_column' => 'menu_order',
+      'orderby' => 'desc',
+      'post_parent' => 0,
+    ]);
 
-	 $itemList = [];
-	 foreach ($list as $itemData) {
-		 $postID = $itemData->ID;
-		 $postTitle = $itemData->post_title;
-		 $categoryTerms = get_the_terms($postID, 'pillar');
-		 $levelTerms = get_the_terms($postID, 'level');
-		 $postImage = get_the_post_thumbnail_url($postID, "medium");
-		 $duration = get_field('duration', $postID);
-		 $courseOverview = get_field('course_overview', $postID);
-		 $intro = get_field('intro', $postID);
-		 $postUrl = get_bloginfo('wpurl')."/courses/" . $itemData->post_name;;
+    $itemList = [];
+    foreach ($list as $itemData) {
+      $postID = $itemData->ID;
+      $postTitle = $itemData->post_title;
+			$categoryTerms = get_the_terms($postID, 'pillar');
+			$levelTerms = get_the_terms($postID, 'level');
+      $postImage = get_the_post_thumbnail_url($postID, "medium");
+      $duration = get_field('duration', $postID);
+      $courseOverview = get_field('course_overview', $postID);
+      $intro = get_field('intro', $postID);
+      $postUrl = get_bloginfo('wpurl')."/courses/" . $itemData->post_name;;
 
-		 $itemList[] = [
-			 'id' => "$postID",
-			 'title' => $postTitle,
-			 'image' => $postImage,
-			 'duration' => $duration,
-			 'categories' => $categoryTerms,
-			 'levels' => $levelTerms,
-			 'course_overview' => $courseOverview,
-			 'description' => $intro,
-			 'link' => $postUrl,
-		 ];
-	 }
+      $itemList[] = [
+        'id' => "$postID",
+        'title' => $postTitle,
+        'image' => $postImage,
+        'duration' => $duration,
+				'categories' => $categoryTerms !== false ? $categoryTerms : [],
+				'levels' => $levelTerms !== false ? $levelTerms : [],
+        'course_overview' => $courseOverview,
+        'description' => $intro,
+        'link' => $postUrl,
+      ];
+    }
 
-	 return json_encode($itemList);
-}
-// END FILTER PAGE
+    return json_encode($itemList);
+ }
+ // END FILTER PAGE
