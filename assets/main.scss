@@ -7,7 +7,7 @@
 //@import "../node_modules/bootstrap/scss/bootstrap";
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/functions";
 
 //google fonts
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800&display=swap");
@@ -70,46 +70,49 @@ $navbar-light-brand-color: #7055aa;
 $navbar-light-color: #7055aa;
 
 $box-shadow: 0 0.5rem 1rem rgba($blue, 0.1);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 // 3. Include remainder of required Bootstrap stylesheets
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+// @import "../node_modules/bootstrap/scss/utilities";
+// @import "../node_modules/bootstrap/scss/root";
 
-// 4. Include any optional Bootstrap CSS as needed: Uncomment all components that are not needed to reduce the filesize
-@import "../node_modules/bootstrap/scss/utilities";
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
-@import "../node_modules/bootstrap/scss/images";
-@import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
-@import "../node_modules/bootstrap/scss/tables";
-@import "../node_modules/bootstrap/scss/forms";
-@import "../node_modules/bootstrap/scss/buttons";
-@import "../node_modules/bootstrap/scss/transitions";
-@import "../node_modules/bootstrap/scss/dropdown";
-@import "../node_modules/bootstrap/scss/button-group";
-@import "../node_modules/bootstrap/scss/nav";
-@import "../node_modules/bootstrap/scss/navbar";
-@import "../node_modules/bootstrap/scss/card";
-@import "../node_modules/bootstrap/scss/accordion";
-@import "../node_modules/bootstrap/scss/breadcrumb";
-@import "../node_modules/bootstrap/scss/pagination";
-@import "../node_modules/bootstrap/scss/badge";
-@import "../node_modules/bootstrap/scss/alert";
-@import "../node_modules/bootstrap/scss/progress";
-@import "../node_modules/bootstrap/scss/list-group";
-@import "../node_modules/bootstrap/scss/close";
-@import "../node_modules/bootstrap/scss/toasts";
-@import "../node_modules/bootstrap/scss/modal";
-@import "../node_modules/bootstrap/scss/tooltip";
-@import "../node_modules/bootstrap/scss/popover";
-@import "../node_modules/bootstrap/scss/carousel";
-@import "../node_modules/bootstrap/scss/spinners";
-@import "../node_modules/bootstrap/scss/offcanvas";
-@import "../node_modules/bootstrap/scss/helpers";
+// // 4. Include any optional Bootstrap CSS as needed: Uncomment all components that are not needed to reduce the filesize
+// @import "../node_modules/bootstrap/scss/reboot";
+// @import "../node_modules/bootstrap/scss/type";
+// @import "../node_modules/bootstrap/scss/images";
+// @import "../node_modules/bootstrap/scss/containers";
+// @import "../node_modules/bootstrap/scss/grid";
+// @import "../node_modules/bootstrap/scss/tables";
+// @import "../node_modules/bootstrap/scss/forms";
+// @import "../node_modules/bootstrap/scss/buttons";
+// @import "../node_modules/bootstrap/scss/transitions";
+// @import "../node_modules/bootstrap/scss/dropdown";
+// @import "../node_modules/bootstrap/scss/button-group";
+// @import "../node_modules/bootstrap/scss/nav";
+// @import "../node_modules/bootstrap/scss/navbar";
+// @import "../node_modules/bootstrap/scss/card";
+// @import "../node_modules/bootstrap/scss/accordion";
+// @import "../node_modules/bootstrap/scss/breadcrumb";
+// @import "../node_modules/bootstrap/scss/pagination";
+// @import "../node_modules/bootstrap/scss/badge";
+// @import "../node_modules/bootstrap/scss/alert";
+// @import "../node_modules/bootstrap/scss/progress";
+// @import "../node_modules/bootstrap/scss/list-group";
+// @import "../node_modules/bootstrap/scss/close";
+// @import "../node_modules/bootstrap/scss/toasts";
+// @import "../node_modules/bootstrap/scss/modal";
+// @import "../node_modules/bootstrap/scss/tooltip";
+// @import "../node_modules/bootstrap/scss/popover";
+// @import "../node_modules/bootstrap/scss/carousel";
+// @import "../node_modules/bootstrap/scss/spinners";
+// @import "../node_modules/bootstrap/scss/offcanvas";
+// @import "../node_modules/bootstrap/scss/helpers";
 
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
-@import "../node_modules/bootstrap/scss/utilities/api";
+// // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
+// @import "../node_modules/bootstrap/scss/utilities/api";
 
 /**
  * General
@@ -210,7 +213,7 @@ header {
 .navbar-light {
   background-color: $white;
   ul li a {
-    color: #6610f2;
+    color: $blue;
   }
 }
 .navbar-brand {
@@ -238,7 +241,7 @@ header {
   }
   &::after{
     content: '';
-    background: url(http://grow-tourism.local/wp-content/uploads/2022/08/overlay-pattern.png);
+    background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/overlay-pattern.png);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -294,7 +297,7 @@ header {
   blockquote {
     &::before {
       content: "";
-      background: url(http://grow-tourism.local/wp-content/uploads/2022/07/quetation-left.svg);
+      background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/quetation-left.svg);
       background-repeat: no-repeat;
       font-size: x-large;
       position: absolute;
@@ -304,7 +307,7 @@ header {
     }
     &::after {
       content: "";
-      background: url(http://grow-tourism.local/wp-content/uploads/2022/07/quetation-right.svg);
+      background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/quetation-right.svg);
       background-repeat: no-repeat;
       font-size: x-large;
       position: absolute;
@@ -334,7 +337,9 @@ header {
 }
 
 /* Main */
-
+.max-width-1024{
+  max-width: 1024px;
+}
 #main {
 }
 
@@ -598,10 +603,12 @@ h1{
 .floter {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  top: 0;
+  height: 100%;
+  z-index: -1;
 }
 .floter-thread {
-  // background-image: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Dashed-line-group.svg);
+  background-image: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/background-image-thread.svg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -654,7 +661,7 @@ h1{
 // course page
 
 .course {
-  max-width: 1024px;
+  
   .course-catrgory {
     font-weight: 500;
   }
@@ -703,6 +710,13 @@ h1{
 .review-wraper {
   .reviews {
     height: fit-content;
+    .splide__slide{
+      .card{
+        .maintxt{
+          display: block;
+        }
+      }
+    }
   }
   .card {
     background: rgb(112, 85, 170);
@@ -821,8 +835,6 @@ h1{
 }
 // course archive
 .course-archive {
-  padding: 0 10px;
-  max-width: 1320px;
   article {
     .card {
       font-size: medium;
@@ -854,6 +866,25 @@ h1{
     &:last-child {
       margin-bottom: 0 !important;
     }
+  }
+}
+//blog posts archive page
+.blog-post-wrap{
+  .filters{
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .btn-outline-primary {
+    border: none;
+    font-weight: 500;
+    &:hover {
+      background-color: transparent;
+      color: $blue;
+    }
+  }
+  .active {
+    background-color: transparent;
+    color: $blue;
   }
 }
 /**

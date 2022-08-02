@@ -56,7 +56,7 @@ const Filters = ({
               categoryOptions.map((category, index) => (
                   <div className="form-check" key={index}>
                     <input 
-                      className="form-check-input" 
+                      className="form-check-input rounded-pill border-primary border-3" 
                       type="checkbox" 
                       value={category.id} 
                       id={`flexCheckDefault_${category.id}`}
@@ -76,7 +76,7 @@ const Filters = ({
               levelOptions.map((level, index) => (
                 <div className="form-check" key={index}>
                   <input 
-                    className="form-check-input" 
+                    className="form-check-input rounded-pill border-primary border-3" 
                     type="checkbox"
                     value={level.id}
                     id={`flexCheckLevels_${level.id}`}

@@ -6,133 +6,132 @@
  */
 ?>
 
-<div class="container mt-5">
-	<div class="course mx-auto">
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="course-intro text-primary py-3">
-				<div class="course-catrgory text-uppercase"><?php the_field('category'); ?></div>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<?php
-					if ('post' === get_post_type()) :
-					?>
-						<div class="entry-meta">
-							<?php grow_tourism_article_posted_on(); ?>
-						</div><!-- /.entry-meta -->
-					<?php
-					endif;
-					?>
-				</header><!-- /.entry-header -->
-				<?php the_field('intro'); ?>
-			</div>
-			<div class="course-highlight background-gradiant p-3 text-white">
-				<div class="row">
-					<div class="col-6">
-						<h4 class="mb-1">About the course</h4>
-						<div class="course-summary d-flex mb-2">
-							<div class="d-flex align-items-center me-2">
-								<i class="fa-solid fa-tags"></i>
-								<div class="category-wrap ms-1">
-									<span class="category-title">Category</span>
-									<span><?php the_field('category'); ?></span>
-								</div>
-							</div>
-							<div class="d-flex align-items-center me-2">
-								<i class="fa-solid fa-clock"></i>
-								<div class="category-wrap ms-1">
-									<span class="category-title">Duration</span>
-									<span><?php the_field('duration'); ?> hours</span>
-								</div>
-							</div>
-							<div class="d-flex align-items-center me-2">
-								<i class="fa-solid fa-graduation-cap"></i>
-								<div class="category-wrap ms-1">
-									<span class="category-title">Level</span>
-									<span><?php the_field('level'); ?></span>
-								</div>
-							</div>
-						</div>
-						<div class="sumary-description">
-							<p><strong>COURSE OVERVIEW </strong></p>
-							<p><?php the_field('course_overview'); ?></p>
-						</div>
-						<button type="button" class="btn btn-light btn-sm rounded-pill">Register today <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-					</div>
-					<div class="col-6">
-						<?php
-						if (has_post_thumbnail()) :
-							echo '<div class="post-thumbnail">' . get_the_post_thumbnail(get_the_ID(), 'large') . '</div>';
-						endif; ?>
-					</div>
-				</div>
-			</div>
-			<div class="entry-content">
-				<div class="row text-primary py-3 g-4">
-					<div class="col-8">
-						<h4>Course details</h4>
-						<?php
-						the_content();
 
-						wp_link_pages(array('before' => '<div class="page-link"><span>' . esc_html__('Pages:', 'grow-tourism') . '</span>', 'after' => '</div>'));
-						?>
-					</div>
-					<div class="col-4">
-						<h4>Meet your tutor</h4>
-						<div class="tutor-profile d-flex">
-							<div class="tutor-picture me-1">
-								<div class="rounded-circle border d-flex justify-content-center align-items-center overflow-hidden">
-									<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Tash-Alex-600x593-1.jpg" alt="" srcset="">
-								</div>
-							</div>
-							<div class="tutor-summary">
-								<p class="mb-0"><strong>Tim Olson</strong></p>
-								<p class="small">Technical Director at Maverick Digital</p>
-							</div>
-						</div>
-						<p><?php the_field('description'); ?></p>
-					</div>
-				</div>
-			</div><!-- /.entry-content -->
 
+<article id="post-<?php the_ID(); ?>" <?php post_class('content container pt-5 text-primary '); ?>>
+	<div class="course-intro text-primary py-3">
+		<div class="course-catrgory text-uppercase"><?php the_field('category'); ?></div>
+		<header class="entry-header">
+			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php
-			edit_post_link(__('Edit', 'grow-tourism'), '<span class="edit-link">', '</span>');
+			if ('post' === get_post_type()) :
 			?>
-		</article><!-- /#post-<?php the_ID(); ?> -->
-		<section class="lessons-wraper">
-			<div class="course-intro text-primary py-3">
-				<header class="entry-header">
-					<h1 class="entry-header">What you’ll learn</h1>
-					<p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-				</header>
+				<div class="entry-meta">
+					<?php grow_tourism_article_posted_on(); ?>
+				</div><!-- /.entry-meta -->
+			<?php
+			endif;
+			?>
+		</header><!-- /.entry-header -->
+		<?php the_field('intro'); ?>
+	</div>
+	<div class="course-highlight background-gradiant p-3 text-white">
+		<div class="row">
+			<div class="col-6">
+				<h4 class="mb-1">About the course</h4>
+				<div class="course-summary d-flex mb-2">
+					<div class="d-flex align-items-center me-2">
+						<i class="fa-solid fa-tags"></i>
+						<div class="category-wrap ms-1">
+							<span class="category-title">Category</span>
+							<span><?php the_field('category'); ?></span>
+						</div>
+					</div>
+					<div class="d-flex align-items-center me-2">
+						<i class="fa-solid fa-clock"></i>
+						<div class="category-wrap ms-1">
+							<span class="category-title">Duration</span>
+							<span><?php the_field('duration'); ?> hours</span>
+						</div>
+					</div>
+					<div class="d-flex align-items-center me-2">
+						<i class="fa-solid fa-graduation-cap"></i>
+						<div class="category-wrap ms-1">
+							<span class="category-title">Level</span>
+							<span><?php the_field('level'); ?></span>
+						</div>
+					</div>
+				</div>
+				<div class="sumary-description">
+					<p><strong>COURSE OVERVIEW </strong></p>
+					<p><?php the_field('course_overview'); ?></p>
+				</div>
+				<button type="button" class="btn btn-light btn-sm rounded-pill">Register today <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 			</div>
+			<div class="col-6">
+				<?php
+				if (has_post_thumbnail()) :
+					echo '<div class="post-thumbnail">' . get_the_post_thumbnail(get_the_ID(), 'large') . '</div>';
+				endif; ?>
+			</div>
+		</div>
+	</div>
+	<div class="entry-content">
+		<div class="row text-primary py-3 g-4">
+			<div class="col-8">
+				<h4>Course details</h4>
+				<?php
+				the_content();
 
-
-			<?php if (have_rows('lesson')) : ?>
-				<?php while (have_rows('lesson')) : the_row(); ?>
-					<div class="lesson bg-light p-3 row mb-2 justify-content-between align-items-center text-primary">
-						<div class="col-7">
-							<h5><?php the_sub_field('lasson_name'); ?></h5>
-							<p class="m-0"><?php the_sub_field('lesson_description'); ?></p>
+				wp_link_pages(array('before' => '<div class="page-link"><span>' . esc_html__('Pages:', 'grow-tourism') . '</span>', 'after' => '</div>'));
+				?>
+			</div>
+			<div class="col-4">
+				<h4>Meet your tutor</h4>
+				<div class="tutor-profile d-flex">
+					<div class="tutor-picture me-1">
+						<div class="rounded-circle border d-flex justify-content-center align-items-center overflow-hidden">
+						<?php if ( get_field( 'image' ) ) : ?>
+	<img  class="img-fluid" src="<?php the_field( 'image' ); ?>" />
+<?php endif ?>
+							
 						</div>
-						<div class="col-3">
-							<div class="badge rounded-pill bg-primary px-2 py-1 lesson-info">
-								<span class="px-1"><?php the_sub_field('lesson_number_of_videos'); ?> Videos</span>
-								<span class="px-1"><?php the_sub_field('lessons_number_of_hours'); ?> hours</span>
-							</div>
-						</div>
+					</div>
+					<div class="tutor-summary">
+						<p class="mb-0"><strong><?php the_field( 'name' ); ?></strong></p>
+						<p class="small"><?php the_field( 'position' ); ?></p>
+					</div>
+				</div>
+				<p><?php the_field('description'); ?></p>
+			</div>
+		</div>
+	</div><!-- /.entry-content -->
+	<section class="lessons-wraper">
+		<div class="course-intro text-primary py-3">
+			<header class="entry-header">
+				<h1 class="entry-header">What you'll learn</h1>
+				<p>Omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+			</header>
+		</div>
 
+
+		<?php if (have_rows('lesson')) : ?>
+			<?php while (have_rows('lesson')) : the_row(); ?>
+				<div class="lesson bg-light p-3 row mb-2 justify-content-between align-items-center text-primary">
+					<div class="col-7">
+						<h5><?php the_sub_field('lasson_name'); ?></h5>
+						<p class="m-0"><?php the_sub_field('lesson_description'); ?></p>
+					</div>
+					<div class="col-3">
+						<div class="badge rounded-pill bg-primary px-2 py-1 lesson-info">
+							<span class="px-1"><?php the_sub_field('lesson_number_of_videos'); ?> Videos</span>
+							<span class="px-1"><?php the_sub_field('lessons_number_of_hours'); ?> hours</span>
+						</div>
 					</div>
 
-				<?php endwhile; ?>
-			<?php else : ?>
-				<?php // No rows found 
-				?>
-			<?php endif; ?>
-		</section>
-	</div>
+				</div>
 
-</div>
-<section class="review-wraper container mb-4">
+			<?php endwhile; ?>
+		<?php else : ?>
+			<?php // No rows found 
+			?>
+		<?php endif; ?>
+	</section>
+	<?php
+	edit_post_link(__('Edit', 'grow-tourism'), '<span class="edit-link">', '</span>');
+	?>
+</article><!-- /#post-<?php the_ID(); ?> -->
+<section class="review-wraper mt-4">
 	<div class="course-intro text-primary text-center">
 		<header class="entry-header">
 			<h1 class="entry-header">Course reviews</h1>
@@ -144,7 +143,7 @@
 				<li class="splide__slide">
 					<div class="card">
 						<div class="px-2 py-2">
-							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
+							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua.Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
 							<div class="d-flex pt-3">
 								<div><img src="https://i.imgur.com/hczKIze.jpg" width="50" class="rounded-circle"></div>
 								<div class="ms-1">
@@ -158,7 +157,7 @@
 				<li class="splide__slide">
 					<div class="card">
 						<div class="px-2 py-2">
-							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
+							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
 							<div class="d-flex pt-3">
 								<div><img src="https://i.imgur.com/hczKIze.jpg" width="50" class="rounded-circle"></div>
 								<div class="ms-1">
@@ -172,7 +171,7 @@
 				<li class="splide__slide">
 					<div class="card">
 						<div class="px-2 py-2">
-							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
+							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
 							<div class="d-flex pt-3">
 								<div><img src="https://i.imgur.com/hczKIze.jpg" width="50" class="rounded-circle"></div>
 								<div class="ms-1">
@@ -186,7 +185,7 @@
 				<li class="splide__slide">
 					<div class="card">
 						<div class="px-2 py-2">
-							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
+							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
 							<div class="d-flex pt-3">
 								<div><img src="https://i.imgur.com/hczKIze.jpg" width="50" class="rounded-circle"></div>
 								<div class="ms-1">
@@ -200,7 +199,7 @@
 				<li class="splide__slide">
 					<div class="card">
 						<div class="px-2 py-2">
-							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
+							<span class="maintxt">"Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua."</span>
 							<div class="d-flex pt-3">
 								<div><img src="https://i.imgur.com/hczKIze.jpg" width="50" class="rounded-circle"></div>
 								<div class="ms-1">
@@ -215,8 +214,8 @@
 		</div>
 	</div>
 </section>
-<section class="faq">
-	<div class="container background-gradiant py-4">
+<section class="faq mt-5">
+	<div class="background-gradiant py-4">
 		<div class="course-intro text-white text-center">
 			<header class="entry-header">
 				<h1 class="entry-header">Frequently asked questions</h1>

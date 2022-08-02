@@ -32,7 +32,7 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
       return (
         <>
         <div className="col-md-9">
-          <div className="course-intro text-primary text-center">
+          <div className="course-intro text-primary text-center mb-3">
             <header className="entry-header">
               <h1 className="entry-header">Course reviews</h1>
               <p>Select from individual courses or let us build your own curriculum.</p>
@@ -47,7 +47,7 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
       return (
         <>
         <div className="col-md-9">
-          <div className="course-intro text-primary text-center">
+          <div className="course-intro text-primary text-center mb-3">
             <header className="entry-header">
               <h1 className="entry-header">Course reviews</h1>
               <p>Select from individual courses or let us build your own curriculum.</p>

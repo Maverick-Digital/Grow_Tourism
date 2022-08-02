@@ -97,7 +97,7 @@ const Filter = () => {
   return (
     <div className="App">
       <div className="mx-auto course-archive my-5">
-        <div className="row g-0">
+        <div className="row g-3">
           <Filters 
             updateKeyword={updateKeyword}
             triggerFetchListings={changeFilterFunc}

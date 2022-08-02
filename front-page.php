@@ -10,9 +10,6 @@
  
 get_header(); ?>
 
-
-
-
 <div data-aos="zoom-in-up" data-aos-delay="300" class="container py-5">
     <div id="carouselTestimonialsHome" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -59,8 +56,8 @@ get_header(); ?>
     </div>
 </div>
 
-<div class="our-courses background-gradiant">
-    <div class="floter floter-thread"></div>
+<div class="our-courses background-gradiant ">
+    
     <div class="container py-5">
         <div data-masonry='{"percentPosition": true }' class="row">
             <div class="col-sm-6 col-lg-4 mb-4">
@@ -78,7 +75,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
-                <div data-aos="flip-left" class="card border-0 shadow text-primary">
+                <div  class="card border-0 shadow text-primary">
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Customer Experience / Commercials</h5>
@@ -88,7 +85,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
-                <div data-aos="flip-left" class="card border-0 shadow text-primary">
+                <div  class="card border-0 shadow text-primary">
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Culture</h5>
@@ -98,7 +95,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
-                <div data-aos="flip-left" class="card border-0 shadow text-primary">
+                <div  class="card border-0 shadow text-primary">
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-3.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">People & Networks</h5>
@@ -108,7 +105,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
-                <div data-aos="flip-left" class="card border-0 shadow text-primary">
+                <div  class="card border-0 shadow text-primary">
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Sustainability</h5>
@@ -118,7 +115,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
-                <div data-aos="flip-left" class="card border-0 shadow text-primary">
+                <div  class="card border-0 shadow text-primary">
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-5.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Future legacy</h5>
@@ -130,6 +127,7 @@ get_header(); ?>
         </div>
 
     </div>
+    <!-- <div class="floter floter-thread"></div> -->
 </div>
 <div class="syllabus text-primary">
     <div class="container py-5">
@@ -203,7 +201,7 @@ get_header(); ?>
     <div class="container pt-5">
         <h1 class="text-primary fw-normal">High-value <strong>tourism in action</strong></h1>
 
-        <?php echo do_shortcode('[bs-isotope-equal-height type="isotope" tax="isotope_category" cat_parent="49"]'); ?>
+        <?php echo do_shortcode('[bs-isotope-equal-height type="post" tax="category" cat_parent="48"]'); ?>
 
         <a class="text-decoration-underline btn" href="#">Start building <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
     </div>

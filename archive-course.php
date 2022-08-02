@@ -26,6 +26,7 @@ if ( have_posts() ) :
 window.FiltersTaxonomy = <?php echo getFilteredOptionsTaxonomy(); ?>;
 window.ListingsTaxonomy = <?php echo getFilterListingsByTaxonomy(); ?>;
 </script>
+<div class="container">
 <div id="course-div"></div>
 <?php
 else :
@@ -34,6 +35,7 @@ else :
 endif;
 
 wp_reset_postdata(); // End of the loop. ?>
+</div>
 
 <div class="syllabus background-gradiant text-white">
 		<div class="container py-5">
