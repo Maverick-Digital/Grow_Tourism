@@ -1,13 +1,9 @@
 <?php
-
 /**
  * The template for displaying content in the single.php template.
  *
  */
 ?>
-
-
-
 <article id="post-<?php the_ID(); ?>" <?php post_class('content container pt-5 text-primary '); ?>>
 	<div class="course-intro text-primary py-3">
 		<div class="course-catrgory text-uppercase"><?php the_field('category'); ?></div>
@@ -56,7 +52,7 @@
 					<p><strong>COURSE OVERVIEW </strong></p>
 					<p><?php the_field('course_overview'); ?></p>
 				</div>
-				<button type="button" class="btn btn-light btn-sm rounded-pill">Register today <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+				<button type="button" class="btn btn-light btn-sm rounded-pill">Add to learning pathway <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
 			</div>
 			<div class="col-6">
 				<?php

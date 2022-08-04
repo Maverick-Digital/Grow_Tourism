@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: Page (No Sidebar blog)
  * Description: Page template with no sidebar.

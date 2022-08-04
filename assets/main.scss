@@ -295,6 +295,7 @@ header {
 //testimonial
 .testimonial {
   blockquote {
+    font-weight: 300;
     &::before {
       content: "";
       background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/quetation-left.svg);
@@ -316,6 +317,7 @@ header {
       height: 30px;
       width: 30px;
     }
+  
   }
 }
 .our-courses {
@@ -333,6 +335,35 @@ header {
         text-decoration: underline;
       }
     }
+  }
+}
+
+// single post
+.post-feature-image{
+  height: 70vh;
+  display: block;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.author-information{
+  .author-image{
+    width:100px;
+    height: 100px;
+  }
+}
+.recent-post-grid{
+  .filters{
+    display: none !important;
+  }
+}
+.author-meta-single{
+  hr{
+    border: none;
+    height: 2px;
+    background: $blue;
+    opacity: 1;
   }
 }
 

@@ -28,22 +28,6 @@ get_header(); ?>
                     <a class="text-decoration-underline btn" href="#">Meet our Founders <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="testimonial text-center text-primary">
-                    <blockquote class="blockquote">
-                        <p class="px-3">Every successful tourism business we work with knows their people are crucial to delivering better customer experiences and business outcomes. We’re committed to providing the most relevant and accessible professional development platform for tourism businesses to transform the industry for the future.</p>
-
-                    </blockquote>
-                    <div class="p-2 d-flex justify-content-center">
-                        <div class="rounded-circle border d-flex justify-content-center align-items-center overflow-hidden" style="width:100px;height:100px" alt="Avatar">
-                            <img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Tash-Alex-600x593-1.jpg" alt="" srcset="">
-                        </div>
-                    </div>
-                    <p class="fw-bold">Tash McGill & Alex Dykman</p>
-                    <a class="text-decoration-underline btn" href="#">Meet our Founders <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonialsHome" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -64,7 +48,9 @@ get_header(); ?>
                 <div class="card bg-transparent border-0 text-white">
                     <div class="card-body p-0">
                         <h1 class="card-title"><strong>Our courses</strong></h1>
-                        <p class="card-text">Lorem ipsum dolor sit amet, contetur adipiscing elit, sed eiusmod tempor incididunt ut labore et magna aliqua.</p>
+                        <p class="card-text">
+                        Our bite-sized modules teach best-practice across the 5 core pillars of a high-value tourism business. From customer-facing staff to experienced managers, our learning pathways help people gain the skills needed to grow in their tourism careers at every stage, while transforming tourism businesses.  
+                        </p>
                         <ul class="mb-3">
                             <li><a class="fw-bold" href="">Level 1 - Entry to tourism</a></li>
                             <li><a href="">Level 2 - Experienced pro</a></li>
@@ -78,8 +64,10 @@ get_header(); ?>
                 <div  class="card border-0 shadow text-primary">
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Customer Experience / Commercials</h5>
-                        <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <h5 class="card-title">Customer Experience/Commercials </h5>
+                        <p class="card-text">
+                        Understand what an outstanding customer experience looks in high-value tourism businesses, and develop the skills to deliver it within a strong commercial model.  
+                        </p>
                         <a href="#" class="text-decoration-underline btn">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -89,7 +77,7 @@ get_header(); ?>
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Culture</h5>
-                        <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <p class="card-text">Build the knowledge and skills needed to build deeply integrated culture within your team, helping to empower your business to engage and invest in the culture it is surrounded by.  </p>
                         <a href="#" class="text-decoration-underline btn">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -99,7 +87,7 @@ get_header(); ?>
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-3.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">People & Networks</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">Build an understanding of growth pathways, teamwork and professional growth, maximising talent and skills both within yourself and your team. </p>
                         <a href="#" class="text-decoration-underline btn">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -109,7 +97,7 @@ get_header(); ?>
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Sustainability</h5>
-                        <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <p class="card-text">Develop the know-how to ensure high-value tourism leaves a greater positive impact on customers, communities and the environment through industry-leading best practice.  </p>
                         <a href="#" class="text-decoration-underline btn">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -119,7 +107,7 @@ get_header(); ?>
                     <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-5.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Future legacy</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">Explore best practice business planning and strategy to develop your ability to think ahead of the next curveball and build a resilient, future-focused tourism business.  </p>
                         <a href="#" class="text-decoration-underline btn">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -133,9 +121,9 @@ get_header(); ?>
     <div class="container py-5">
         <div class="row">
             <div class="col-md-4">
-                <h1 class="fw-normal">Build your<br><strong>own syllabus</strong></h1>
+                <h1 class="fw-normal">Build your <br><strong>own learning pathway</strong></h1>
                 <p>
-                    Lorem ipsum dolor sit amet, contetur adipiscing elit, sed eiusmod tempo. Ut enim ad minima veniam quisomo nostrum exercitationem ullam corpor.
+                Let Grow Tourism recommend a collection of modules based on where you are at in your tourism career and your ambitions for the future.  
                 </p>
                 <button type="button" class="btn btn-primary btn-lg rounded-pill mt-2">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
@@ -145,11 +133,11 @@ get_header(); ?>
                         <h4>I am a...</h4>
                         <div class="d-grid gap-2">
                             <input type="checkbox" class="btn-check" id="btn-check-outlined1" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btn-check-outlined1">New tourism proffesional</label>
+                            <label class="btn btn-outline-primary" for="btn-check-outlined1">New tourism professional</label>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined2" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btn-check-outlined2">Tourism business owner</label>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btn-check-outlined3">Experience guide</label>
+                            <label class="btn btn-outline-primary" for="btn-check-outlined3">Experienced guide</label>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined4" autocomplete="off">
                             <label class="btn btn-outline-primary" for="btn-check-outlined4">Manager with a team</label>
                         </div>
@@ -159,13 +147,13 @@ get_header(); ?>
                         <div class="d-grid gap-2">
 
                             <input type="checkbox" class="btn-check" id="btn-check-outlined5" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btn-check-outlined5">Upskill my team</label>
+                            <label class="btn btn-outline-primary" for="btn-check-outlined5">Build valuable tourism skills </label>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined6" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btn-check-outlined6">Build a legacy</label>
+                            <label class="btn btn-outline-primary" for="btn-check-outlined6">Develop as a leader</label>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined7" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btn-check-outlined7">Develop my skills</label>
+                            <label class="btn btn-outline-primary" for="btn-check-outlined7">Build a legacy</label>
                             <input type="checkbox" class="btn-check" id="btn-check-outlined8" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btn-check-outlined8">Take on 2023</label>
+                            <label class="btn btn-outline-primary" for="btn-check-outlined8">Look to 2023 and beyond</label>
                         </div>
                         
                     </div>
@@ -179,19 +167,20 @@ get_header(); ?>
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h1 class="">Features</h1>
-                <p>Lorem ipsum dolor sit amet, contetur adipiscing elit, sed eiusmod tempo. Ut enim ad minima veniam quisomo nostrum exercitationem.</p>
+                <h1 class="">What does Grow Tourism <br>look like</h1>
                 <ul>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate</li>
-                    <li>Duis aute irure dolor in reprehenderit in voluptate</li>
+                    <li>A learner diagnostic assessment </li>
+                    <li>Recommended learning journeys based on strengths and areas for growth </li>
+                    <li>Professional development reporting for employers </li>
+                    <li>Tiered learning with clear learning outcomes </li>
+                    <li>Industry-led, expert-fed modules </li>
+                    <li>Customisable programs </li>
+                    <li>Learning feedback for employers </li>
                 </ul>
                 <button type="button" class="btn btn-light btn-lg rounded-pill mt-2">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
             <div  data-aos="fade-up" class="col-md-6">
-                <img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/feature.png" alt="" srcset="">
+                <img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/feature-image-courses.png" alt="" srcset="">
             </div>
         </div>
     </div>
@@ -210,23 +199,19 @@ get_header(); ?>
 <div class="counter-grid">
     <div class="container py-5 text-center text-primary">
         <h1 class="fw-normal">Are you ready <strong>for the future</strong></h1>
-        <p>Why HVT solves all of this lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud.</p>
+        <p>We see a world where New Zealand’s tourism workforce is well-equipped to serve the traveller of the future with sustainable, high-value tourism experiences. A workforce enabled to build long-term career paths, contributing higher value to industry and making local impact on communities. </p>
         <div  data-aos="fade-up" class="row counters pt-2">
-            <div class="col-md-3 counter px-3">
-                <h2>89%</h2>
-                <small>of business struggle retaining good staff</small>
-            </div>
-            <div class="col-md-3 counter px-3">
+            <div class="col-md-4 counter px-3">
                 <h2>1 in 3</h2>
-                <small>businesses have a sustainability framework</small>
+                <small>New jobs will be in tourism globally in the next 12 months <i>- World Travel & Tourism Council</i></small>
             </div>
-            <div class="col-md-3 counter px-3">
-                <h2>4M+</h2>
-                <small>potential NZ travellers are looking for high-value experiences</small>
+            <div class="col-md-4 counter px-3">
+                <h2>43%</h2>
+                <small>Said talent retention is the #1 challenge employers are facing right now <i>- LinkedIn Talent Solutions Survey</i></small>
             </div>
-            <div class="col-md-3 counter px-3">
-                <h2>200k</h2>
-                <small>Excepteur sint occaecat cupidat at non proident.</small>
+            <div class="col-md-4 counter px-3">
+                <h2>#1</h2>
+                <small>“A career pathway” #1 thing to attract and retain tourism professionals <i>- Hinonga Koriri,2019</i></small>
             </div>
         </div>
     </div>
@@ -237,7 +222,7 @@ get_header(); ?>
         <div class="col-md-6 background-gradiant">
             <div class="join-us-form p-2 p-md-3 p-lg-4 text-white">
                 <h1 class="fw-normal">Join the <strong> movement</strong></h1>
-                <p>Sign up and be a part of the Grow Tourism movement. <strong>Launching August 1, 2022.</strong></p>
+                <p>Sign up and be a part of the Grow Tourism movement. <strong>Launching March 2023</strong></p>
                 <div class="from-wrapper mt-3">
                     <?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
                 </div>

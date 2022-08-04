@@ -36,12 +36,13 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 
 						if (!empty($header_logo)) :
 						?>
-							<img src="<?php echo esc_url($header_logo); ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
+							<img id="darklLogo" src="<?php echo esc_url($header_logo); ?>" alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" />
 						<?php
 						else :
 							echo esc_attr(get_bloginfo('name', 'display'));
 						endif;
 						?>
+						<img style="display: none;" id="lightLogo" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/Grow-Tourism-logo_white.svg" alt="" srcset="">
 					</a>
 
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'grow-tourism'); ?>">
@@ -99,8 +100,8 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 		if (is_front_page()) : ?>
 			<div class="pt-5 home-header">
 				<div class="container pt-4 text-center text-white">
-					<h1 class="display-5 fw-normal">I am delivering world-class <br><strong>tourism experiences</strong></h1>
-					<p class="fs-4">The key to unlocking high-value tourism is developing our people.</p>
+					<h1 class="display-5 fw-normal">Learn the skills, insights and knowledge to deliver <br><strong>world-class tourism experiences</strong></h1>
+					<p class="fs-4">The key to unlocking high-value tourism in New Zealand is developing our people.</p>
 					<button class="btn btn-light btn-lg rounded-pill mt-2" type="button">Learn more <i class="fa-solid fa-arrow-right"></i></button>
 				</div>
 				<div class="container-fluid d-flex align-items-center justify-content-between px-0 hero-images pt-3">
@@ -108,10 +109,10 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 						<img  class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/1.png" alt="" srcset="">
 					</div>
 					<div data-aos="fade-up" class="">
-						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/2.png" alt="" srcset="">
+						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/5-1.png" alt="" srcset="">
 					</div>
 					<div data-aos="fade-up" class="">
-						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/3.png" alt="" srcset="">
+						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/6.png" alt="" srcset="">
 					</div>
 					<div data-aos="fade-up" class="">
 						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/4.png" alt="" srcset="">
@@ -165,10 +166,9 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 							wp_nav_menu(
 								array(
 									'theme_location' => 'offcanvas-menu',
-									'container'      => '',
+									'container'      => 'div',
 									'menu_class'     => 'navbar-nav me-auto',
-									'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-									'walker'         => new WP_Bootstrap_Navwalker(),
+									
 								)
 							);
 
