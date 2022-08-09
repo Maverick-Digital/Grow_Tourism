@@ -237,10 +237,10 @@ header {
     color: #fff;
   }
   .btn-outline-light:hover {
-    color: $blue;
+    color: #17141e;
   }
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/overlay-pattern.png);
     width: 100%;
     height: 100%;
@@ -259,9 +259,7 @@ header {
   );
   a {
     color: #fff;
-  
   }
-
 }
 #menu-main-menue {
   li {
@@ -286,10 +284,9 @@ header {
 }
 
 //off canvas menue
-.offcanvas-body{
-#menu-off-canvas-menu{
-
-}
+.offcanvas-body {
+  #menu-off-canvas-menu {
+  }
 }
 
 //testimonial
@@ -317,12 +314,10 @@ header {
       height: 30px;
       width: 30px;
     }
-  
   }
 }
 .our-courses {
   ul {
-  
     padding: 0;
     margin: 0;
     li {
@@ -339,7 +334,7 @@ header {
 }
 
 // single post
-.post-feature-image{
+.post-feature-image {
   height: 70vh;
   display: block;
   background-attachment: fixed;
@@ -347,28 +342,28 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.author-information{
-  .author-image{
-    width:100px;
+.author-information {
+  .author-image {
+    width: 100px;
     height: 100px;
   }
 }
-.recent-post-grid{
-  .filters{
+.recent-post-grid {
+  .filters {
     display: none !important;
   }
 }
-.author-meta-single{
-  hr{
+.author-meta-single {
+  hr {
     border: none;
     height: 2px;
-    background: $blue;
+    background: $white;
     opacity: 1;
   }
 }
 
 /* Main */
-.max-width-1024{
+.max-width-1024 {
   max-width: 1024px;
 }
 #main {
@@ -566,8 +561,8 @@ header {
 
 // home page
 .join-us {
-  h1{
-    strong{
+  h1 {
+    strong {
       font-weight: 700;
     }
   }
@@ -582,47 +577,45 @@ header {
   //     rgba(154, 92, 140, 1) 100%
   //   );
   // }
-  .home-page-form{
+  .home-page-form {
     ::placeholder {
       font-weight: 200;
       color: $blue;
     }
-    input{
+    input {
       border: none;
       margin-bottom: 20px;
       color: $blue;
     }
-    .button{
-    border-radius: 25px;
-    padding: 8px 16px;
-    font-weight: 500;
-    color: $blue;
+    .button {
+      border-radius: 25px;
+      padding: 8px 16px;
+      font-weight: 500;
+      color: $blue;
     }
   }
 }
 
 .syllabus {
-h1{
-  strong{
-    font-weight: 700;
+  h1 {
+    strong {
+      font-weight: 700;
+    }
   }
-}
-.finder-options{
-  .btn{
-    font-weight: 300;
+  .finder-options {
+    .btn {
+      font-weight: 300;
+    }
   }
-}
 }
 
-.features{
-  ul{
-    li{
+.features {
+  ul {
+    li {
       line-height: normal;
       padding-left: 15px;
       margin-bottom: 10px;
-      font-size: small;
-      // list-style-type: "\1F44D"; // thumbs up sign
-      &::marker{
+      &::marker {
         content: "\f00c"; /* FontAwesome Unicode */
         font-family: FontAwesome;
         display: inline-block;
@@ -647,10 +640,10 @@ h1{
 }
 
 .post-grid {
-  h1{
-    strong{
+  h1 {
+    strong {
       font-weight: 700;
-    } 
+    }
   }
   height: fit-content;
   .filters {
@@ -666,33 +659,34 @@ h1{
   }
   .active {
     background-color: transparent;
-    color: $blue;
+    color: #000;
+  }
+  .btn-light{
+    color: $white;
   }
 }
 
-.counter-grid{
-  h1{
-    strong{
+.counter-grid {
+  h1 {
+    strong {
       font-weight: 700;
     }
   }
-  .counter{
+  .counter {
     border-right: 2px solid $blue;
-    &:last-child{
+    &:last-child {
       border: none;
     }
-    h2{
+    h2 {
       font-weight: 800;
       margin-bottom: 0;
     }
   }
 }
 
-
 // course page
 
 .course {
-  
   .course-catrgory {
     font-weight: 500;
   }
@@ -741,9 +735,9 @@ h1{
 .review-wraper {
   .reviews {
     height: fit-content;
-    .splide__slide{
-      .card{
-        .maintxt{
+    .splide__slide {
+      .card {
+        .maintxt {
           display: block;
         }
       }
@@ -900,8 +894,8 @@ h1{
   }
 }
 //blog posts archive page
-.blog-post-wrap{
-  .filters{
+.blog-post-wrap {
+  .filters {
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -918,6 +912,9 @@ h1{
     color: $blue;
   }
 }
+
+// Off canvas menu
+
 /**
  * Responsive Design using "mixins/_breakpoints.scss"
  */
@@ -925,6 +922,10 @@ h1{
 @media (max-width: breakpoint-max(sm)) {
   #sidebar {
     margin-top: 60px;
+  }
+
+  .counter {
+    border-right: 0 !important;
   }
 }
 @media (max-width: breakpoint-max(md)) {
@@ -937,6 +938,22 @@ h1{
       float: left;
       margin-right: 20px;
     }
+  }
+  .counter {
+    border-right: 0 !important;
+  }
+  .mobile-menu{
+    li{
+      text-align: center;
+      border-right: none !important;
+    }
+  }
+  .social-icons-wrap{
+   a{
+    &:last-child{
+      padding-right: 0 !important;
+    }
+   }
   }
 }
 @media (max-width: breakpoint-max(lg)) {

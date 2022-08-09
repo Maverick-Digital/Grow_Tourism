@@ -7,7 +7,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('mt-5'); ?>>
 	<div class="container">
-		<header class="entry-header text-primary text-center">
+		<header class="entry-header text-primary text-center pt-3">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php
 			if ('post' === get_post_type()) :
@@ -45,17 +45,17 @@
 			$author_id = get_the_author_meta('ID');
 			$author_badge = get_field('user_profile_picture', 'user_' . $author_id);
 			?>
-			<div class="row author-information text-primary">
-				<div class="col-auto">
+			<div class="row author-information text-primary align-items-center">
+				<div class="col-auto d-none d-sm-block">
 					<div class="author-image rounded-circle border justify-content-center align-items-center overflow-hidden "><img class="img-fluid" src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" /></div>
 				</div>
-				<div class="col-8">
+				<div class="col-sm-12 col-md-8">
 					<h5 class="mb-0"><?php echo get_the_author_meta('display_name', $author_id); ?></h5>
 					<p class="mb-1"><strong>
 							<?php the_field('author_profession', 'user_' . $author_id);
 							?>
 						</strong></p>
-					<p><?php the_author_meta('description'); ?></p>
+					<p class="mb-0"><?php the_author_meta('description'); ?></p>
 					<div class="author-links">
 						<?php
 						if (!empty(get_the_author_meta('user_url'))) :
@@ -108,10 +108,10 @@
 			//get_template_part('author', 'bio');
 			?>
 		</footer><!-- /.entry-meta -->
-		<div class="recent-post-grid mt-4 text-primary">
+		<!-- <div class="recent-post-grid mt-4 text-primary">
 			<h2 class="text-center ">Read more posts</h2>
-			<?php echo do_shortcode('[bs-isotope-equal-height type="post" tax="category" cat_parent="48"]'); ?>
-		</div>
+			<?php //echo do_shortcode('[bs-isotope-equal-height type="post" tax="category" cat_parent="48"]'); ?>
+		</div> -->
 	</div>
 	<?php
 	edit_post_link(__('Edit', 'grow-tourism'), '<span class="edit-link">', '</span>');

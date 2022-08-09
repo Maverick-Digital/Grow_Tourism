@@ -1,45 +1,64 @@
-
 <?php
+
 /**
  * The Template for displaying Archive pages.
  */
 
 get_header();
 
-if ( have_posts() ) :
+if (have_posts()) :
 ?>
 
-<header class="page-header">
-	<h1 class="page-title">
-		<?php
-			if ( is_day() ) :
-				printf( esc_html__( 'Daily Archives: %s', 'grow-tourism' ), get_the_date() );
-			elseif ( is_month() ) :
-				printf( esc_html__( 'Monthly Archives: %s', 'grow-tourism' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'grow-tourism' ) ) );
-			elseif ( is_year() ) :
-				printf( esc_html__( 'Yearly Archives: %s', 'grow-tourism' ), get_the_date( _x( 'Y', 'yearly archives date format', 'grow-tourism' ) ) );
+	<header class="page-header">
+		<h1 class="page-title">
+			<?php
+			if (is_day()) :
+				printf(esc_html__('Daily Archives: %s', 'grow-tourism'), get_the_date());
+			elseif (is_month()) :
+				printf(esc_html__('Monthly Archives: %s', 'grow-tourism'), get_the_date(_x('F Y', 'monthly archives date format', 'grow-tourism')));
+			elseif (is_year()) :
+				printf(esc_html__('Yearly Archives: %s', 'grow-tourism'), get_the_date(_x('Y', 'yearly archives date format', 'grow-tourism')));
 			else :
-				esc_html_e( 'Blog Archives', 'grow-tourism' );
+				esc_html_e('Blog Archives', 'grow-tourism');
 			endif;
-		?>
-	</h1>
-</header>
-<script type="text/javascript">
-window.FiltersTaxonomy = <?php echo getFilteredOptionsTaxonomy(); ?>;
-window.ListingsTaxonomy = <?php echo getFilterListingsByTaxonomy(); ?>;
-</script>
-<div class="container">
-<div id="course-div"></div>
+			?>
+		</h1>
+	</header>
+	<script type="text/javascript">
+		window.FiltersTaxonomy = <?php echo getFilteredOptionsTaxonomy(); ?>;
+		window.ListingsTaxonomy = <?php echo getFilterListingsByTaxonomy(); ?>;
+	</script>
+
 <?php
+ 
+if ( is_user_logged_in() ) { ?>
+  // Show Post to Logged in User
+  <div class="container">
+  <div id="course-div"></div>
+<?php } 
+else { ?>
+  //Show password field
+  <div class="container">
+  <h1 class="mt-4">please click the below link login to access this page</h1>
+	<a href="/wp-login.php/">click</a>
+  </div>
+<?php }
+
+?>
+
+
+
+	<?php
 else :
 	// 404.
-	get_template_part( 'content', 'none' );
+	get_template_part('content', 'none');
 endif;
 
-wp_reset_postdata(); // End of the loop. ?>
-</div>
+wp_reset_postdata(); // End of the loop. 
+	?>
+	</div>
 
-<div class="syllabus background-gradiant text-white">
+	<div class="syllabus background-gradiant text-white">
 		<div class="container py-5">
 			<div class="row">
 				<div class="col-md-4">
@@ -84,4 +103,4 @@ wp_reset_postdata(); // End of the loop. ?>
 		</div>
 	</div>
 
-<?php get_footer(); ?>
+	<?php get_footer(); ?>

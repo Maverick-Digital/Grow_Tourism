@@ -16,7 +16,7 @@
 			<footer class="pt-4" id="footer">
 				<div class="container text-primary">
 					<div class="row pb-3">
-						<div class="col-md-6">
+						<div class="col-md-4 col-lg-6">
 							<div class="company-details">
 								<?php
 								dynamic_sidebar('third_widget_area');
@@ -30,7 +30,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-6">
+						<div class="col-md-8 col-lg-6">
 							<div class="row g-0">
 								<div class="col-md-5">
 									<?php
@@ -69,7 +69,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-sm-12 col-md-6">
 							<p><?php printf(esc_html__('&copy; %1$s %2$s. All rights reserved.', 'grow-tourism'), date_i18n('Y'), get_bloginfo('name', 'display')); ?></p>
 						</div>
 
@@ -84,9 +84,9 @@
 								array(
 									'theme_location'  => 'footer-menu',
 									'container'       => 'nav',
-									'container_class' => 'col-md-6',
+									'container_class' => 'col-sm-12 col-md-6',
 									'fallback_cb'     => '',
-									'items_wrap'      => '<ul class="menu nav justify-content-end">%3$s</ul>',
+									'items_wrap'      => '<ul class="menu nav justify-content-md-end">%3$s</ul>',
 									//'fallback_cb'    => 'WP_Bootstrap4_Navwalker_Footer::fallback',
 									'walker'          => new WP_Bootstrap4_Navwalker_Footer(),
 								)

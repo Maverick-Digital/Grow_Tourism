@@ -10885,7 +10885,7 @@ header .btn-light {
   color: #fff;
 }
 .background-gradiant .btn-outline-light:hover {
-  color: #7055aa;
+  color: #17141e;
 }
 .background-gradiant::after {
   content: "";
@@ -10989,7 +10989,7 @@ header .btn-light {
 .author-meta-single hr {
   border: none;
   height: 2px;
-  background: #7055aa;
+  background: #fff6ed;
   opacity: 1;
 }
 
@@ -11165,7 +11165,6 @@ header .btn-light {
   line-height: normal;
   padding-left: 15px;
   margin-bottom: 10px;
-  font-size: small;
 }
 .features ul li::marker {
   content: "\f00c"; /* FontAwesome Unicode */
@@ -11208,7 +11207,10 @@ header .btn-light {
 }
 .post-grid .active {
   background-color: transparent;
-  color: #7055aa;
+  color: #000;
+}
+.post-grid .btn-light {
+  color: #fff6ed;
 }
 
 .counter-grid h1 strong, .counter-grid .h1 strong {
@@ -11409,6 +11411,9 @@ header .btn-light {
   #sidebar {
     margin-top: 60px;
   }
+  .counter {
+    border-right: 0 !important;
+  }
 }
 @media (max-width: 767.98px) {
   .social-media ul {
@@ -11418,6 +11423,16 @@ header .btn-light {
     line-height: 2.5em;
     float: left;
     margin-right: 20px;
+  }
+  .counter {
+    border-right: 0 !important;
+  }
+  .mobile-menu li {
+    text-align: center;
+    border-right: none !important;
+  }
+  .social-icons-wrap a:last-child {
+    padding-right: 0 !important;
   }
 }
 

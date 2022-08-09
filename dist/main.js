@@ -41576,7 +41576,7 @@ var Listing = function Listing(_ref) {
   }, list.title))), /*#__PURE__*/_react.default.createElement("div", {
     className: "card-text entry-content"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "course-summary d-flex mb-1"
+    className: "course-summary d-flex mb-1 align-items-start"
   }, !(0, _utils.isEmpty)(list.categories) && /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex align-items-center me-2"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -41626,7 +41626,7 @@ var Listing = function Listing(_ref) {
   }, "See course overview"), /*#__PURE__*/_react.default.createElement("a", {
     className: "btn btn-sm px-2 btn-primary rounded-pill mx-1",
     href: ""
-  }, "Add to curriculum"))))))));
+  }, "Add to learning pathway"))))))));
 };
 
 var _default = Listing;
@@ -41669,9 +41669,11 @@ var List = function List(_ref) {
   if (listings.length >= loadItems) {
     button = /*#__PURE__*/_react.default.createElement("a", {
       href: "#",
-      className: "listing-cards__load-btn",
+      className: "listing-cards__load-btn btn text-decoration-underline",
       onClick: loadMoreBtn
-    }, "Load More");
+    }, "Load More ", /*#__PURE__*/_react.default.createElement("i", {
+      class: "fa-solid fa-arrow-down"
+    }));
   } else {
     button = "";
   }
@@ -41685,7 +41687,7 @@ var List = function List(_ref) {
       className: "entry-header"
     }, /*#__PURE__*/_react.default.createElement("h1", {
       className: "entry-header"
-    }, "Course reviews"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."))), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Oops...")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Sorry! We found no results. Try broadening your search."))));
+    }, "Courses hub"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."))), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Oops...")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Sorry! We found no results. Try broadening your search."))));
   } else {
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-9"
@@ -41695,7 +41697,7 @@ var List = function List(_ref) {
       className: "entry-header"
     }, /*#__PURE__*/_react.default.createElement("h1", {
       className: "entry-header"
-    }, "Course reviews"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."))), !isLoading && listings.length > 0 && listings.slice(0, loadItems).map(function (list, index) {
+    }, "Courses hub"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."))), !isLoading && listings.length > 0 && listings.slice(0, loadItems).map(function (list, index) {
       return /*#__PURE__*/_react.default.createElement(_listing.default, {
         key: index,
         list: list
@@ -42056,7 +42058,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55466" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60143" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -19,8 +19,8 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
     if (listings.length >= loadItems) {
 
       button = (
-        <a href="#" className="listing-cards__load-btn" onClick={loadMoreBtn}>
-          Load More
+        <a href="#" className="listing-cards__load-btn btn text-decoration-underline" onClick={loadMoreBtn}>
+          Load More <i class="fa-solid fa-arrow-down"></i>
         </a>
       );
 
@@ -34,7 +34,7 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
         <div className="col-md-9">
           <div className="course-intro text-primary text-center mb-3">
             <header className="entry-header">
-              <h1 className="entry-header">Course reviews</h1>
+              <h1 className="entry-header">Courses hub</h1>
               <p>Select from individual courses or let us build your own curriculum.</p>
             </header>
           </div>
@@ -49,7 +49,7 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
         <div className="col-md-9">
           <div className="course-intro text-primary text-center mb-3">
             <header className="entry-header">
-              <h1 className="entry-header">Course reviews</h1>
+              <h1 className="entry-header">Courses hub</h1>
               <p>Select from individual courses or let us build your own curriculum.</p>
             </header>
           </div>

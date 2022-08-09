@@ -21,7 +21,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 
 	<a href="#main" class="visually-hidden-focusable"><?php esc_html_e('Skip to main content', 'grow-tourism'); ?></a>
 
-	<div  id="wrapper">
+	<div id="wrapper">
 		<header>
 			<nav id="header" class="navbar navbar-expand-md text-primary top-navigation <?php echo esc_attr($navbar_scheme);
 																						if (isset($navbar_position) && 'fixed_top' === $navbar_position) : echo ' fixed-top';
@@ -45,31 +45,43 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 						<img style="display: none;" id="lightLogo" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/Grow-Tourism-logo_white.svg" alt="" srcset="">
 					</a>
 
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'grow-tourism'); ?>">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'blank'); ?>">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
+					<!-- <a class="navbar-toggler btn btn-light text-primary" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
+							<i class="fa-solid fa-bars"></i>
+						</a> -->
 
 					<div id="navbar" class="collapse navbar-collapse flex-grow-0 align-items-end">
-						<div class="d-flex flex-column align-items-end">
-							<?php
+						<div class="d-md-flex flex-column align-items-end">
 
-							// Loading WordPress Custom Menu (theme_location).
-							wp_nav_menu(
-								array(
-									'theme_location' => 'header-top-menu',
-									'container'      => '',
-									'menu_class'     => 'navbar-nav',
-									'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-									'walker'         => new WP_Bootstrap_Navwalker(),
-								)
-							);
-							// Loading WordPress Custom Menu (theme_location).
+							<div class="d-md-flex mb-md-2 align-items-center social-icons-header">
+								<div class="text-center my-sm-1 my-md-0 social-icons-wrap">
+									<a target="_blank" href="https://www.linkedin.com/company/grow-tourism/" class="fs-5 text pe-2"><i class="fa-brands fa-linkedin"></i></a>
+									<a target="_blank" href="" class="fs-5 text pe-2"><i class="fab fa-instagram-square"></i></a>
+								</div>
+								<?php
+
+								// Loading WordPress Custom Menu (theme_location).
+								wp_nav_menu(
+									array(
+										'theme_location' => 'header-top-menu',
+										'container'      => '',
+										'menu_class'     => 'navbar-nav mb-sm-1  mb-md-0',
+										'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+										'walker'         => new WP_Bootstrap_Navwalker(),
+									)
+								); ?>
+
+							</div>
+
+							<?php // Loading WordPress Custom Menu (theme_location).
 							wp_nav_menu(
 								array(
 									'theme_location' => 'main-menu',
 									'container'      => '',
-									'menu_class'     => 'navbar-nav me-auto',
+									'menu_class'     => 'navbar-nav me-auto mobile-menu',
 									'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
 									'walker'         => new WP_Bootstrap_Navwalker(),
 								)
@@ -88,9 +100,9 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 							?>
 
 						</div>
-						<a class="btn btn-light text-primary" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
+						<!-- <a class="btn btn-light text-primary" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu">
 							<i class="fa-solid fa-bars"></i>
-						</a>
+						</a> -->
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container -->
 			</nav><!-- /#header -->
@@ -99,14 +111,14 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 		<?php
 		if (is_front_page()) : ?>
 			<div class="pt-5 home-header">
-				<div class="container pt-4 text-center text-white">
+				<div class="container py-5 text-center text-white">
 					<h1 class="display-5 fw-normal">Learn the skills, insights and knowledge to deliver <br><strong>world-class tourism experiences</strong></h1>
 					<p class="fs-4">The key to unlocking high-value tourism in New Zealand is developing our people.</p>
-					<button class="btn btn-light btn-lg rounded-pill mt-2" type="button">Learn more <i class="fa-solid fa-arrow-right"></i></button>
+					<!-- <button class="btn btn-light btn-lg rounded-pill mt-2" type="button">Learn more <i class="fa-solid fa-arrow-right"></i></button> -->
 				</div>
-				<div class="container-fluid d-flex align-items-center justify-content-between px-0 hero-images pt-3">
-					<div  data-aos="fade-up" class="">
-						<img  class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/1.png" alt="" srcset="">
+				<div class="container-fluid d-flex align-items-center justify-content-between px-0 hero-images">
+					<div data-aos="fade-up" class="">
+						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/1.png" alt="" srcset="">
 					</div>
 					<div data-aos="fade-up" class="">
 						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/5-1.png" alt="" srcset="">
@@ -158,7 +170,7 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 						<div class="offcanvas-body pt-0">
 							<div class="mb-3">
 								<p>
-								Grow Tourism is equipping a workforce with the skills, insights and knowledge to build New Zealand’s high value tourism future.
+									Grow Tourism is equipping a workforce with the skills, insights and knowledge to build New Zealand’s high value tourism future.
 								</p>
 							</div>
 							<?php
@@ -166,9 +178,6 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 							wp_nav_menu(
 								array(
 									'theme_location' => 'offcanvas-menu',
-									'container'      => 'div',
-									'menu_class'     => 'navbar-nav me-auto',
-									
 								)
 							);
 
@@ -183,5 +192,15 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 							<?php
 							endif;
 							?>
+
+
+
+
+
+
+
+
+
+
 						</div>
 					</div>

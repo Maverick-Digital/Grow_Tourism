@@ -16,20 +16,20 @@ the_post();
 			<p>Lorem ipsum dolor sit amet contetur adipiscing elit sed eiusmod. Contetur adipiscing elitsed eiusmod tempor incididunt Honim ad minima Fenim ad minima veniam.</p>
 		</header><!-- /.entry-header -->
 	</div>
-	<div class="course-highlight background-gradiant p-3 text-white mb-3">
+	<!-- <div class="course-highlight background-gradiant p-3 text-white mb-3">
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6 mb-3 mb-md-0">
 				<p><strong>COURSE OVERVIEW </strong></p>
 				<h4 class="mb-1">What NZ tourism needs to know about deliveringhigh-value tourism</h4>
 				<p class="mb-0">The development of a high-value tourism model for Aotearoa, New Zealand will continue to be nothing more than a utopian ideal unless we work quickly.</p>
 			</div>
-			<div class="col-6">
+			<div class="col-md-6">
 				<img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid mx-auto" alt="...">
-			</div>
+			</div> 
 		</div>
-	</div>
+	</div> -->
 	<div class="blog-post-wrap">
-		<h2 class="text-center mb-1">All posts</h2>
+		<!-- <h2 class="text-center mb-1">All posts</h2> -->
 		<?php
 		the_content();
 
