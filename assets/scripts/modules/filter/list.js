@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Listing from './listing.js';
 
-const List = ({loadItems, setLoadItems, isLoading, listings}) => {
+const List = ({loadItems, setLoadItems, isLoading, listings, triggerShowFilter}) => {
+    const [show, setShow] = useState(true);
 
     let maxItems = 6;
     const loadMoreBtn = (e) => {
@@ -14,6 +15,12 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
     useEffect(() => {
       setLoadItems(6);
     }, []);
+
+    const hideFilter = (e) => {
+      e.preventDefault();
+      triggerShowFilter(!show);
+      setShow(!show);
+    }
 
     let button;
     if (listings.length >= loadItems) {
@@ -36,6 +43,10 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
             <header className="entry-header">
               <h1 className="entry-header">Courses hub</h1>
               <p>Select from individual courses or let us build your own curriculum.</p>
+              <button type="button" 
+                onClick={hideFilter}
+                className="btn btn-outline-pribmary btn-lg mx-auto w-100">
+                  {show ? <span>Show Filter</span> : <span>Hide Filter</span>}</button>
             </header>
           </div>
           <p><strong>Oops...</strong></p>
@@ -51,6 +62,10 @@ const List = ({loadItems, setLoadItems, isLoading, listings}) => {
             <header className="entry-header">
               <h1 className="entry-header">Courses hub</h1>
               <p>Select from individual courses or let us build your own curriculum.</p>
+              <button type="button" 
+                onClick={hideFilter}
+                className="btn btn-outline-pribmary btn-lg mx-auto w-100 d-block d-md-none">
+                  {show ? <span>Show Filter</span> : <span>Hide Filter</span>}</button>
             </header>
           </div>
             {

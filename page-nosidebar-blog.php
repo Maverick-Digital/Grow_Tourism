@@ -9,11 +9,11 @@ get_header();
 
 the_post();
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class('content container pt-5 text-primary'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('content container py-5 text-primary'); ?>>
 	<div class="text-center text-primary py-3">
 		<header class="entry-header">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
-			<p>Lorem ipsum dolor sit amet contetur adipiscing elit sed eiusmod. Contetur adipiscing elitsed eiusmod tempor incididunt Honim ad minima Fenim ad minima veniam.</p>
+			<p><?php the_field( 'intro' ); ?></p>
 		</header><!-- /.entry-header -->
 	</div>
 	<!-- <div class="course-highlight background-gradiant p-3 text-white mb-3">

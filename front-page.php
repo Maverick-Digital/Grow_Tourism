@@ -6,8 +6,6 @@
  *
  */
 
-
-
 get_header(); ?>
 
 <div class="container py-5">
@@ -17,11 +15,10 @@ get_header(); ?>
                 <div class="testimonial text-center text-primary">
                     <blockquote class="blockquote">
                         <p class="px-3">Every successful tourism business we work with knows their people are crucial to delivering better customer experiences and business outcomes. We’re committed to providing the most relevant and accessible professional development platform for tourism businesses to transform the industry for the future.</p>
-
                     </blockquote>
                     <div class="p-2 d-flex justify-content-center">
                         <div class="rounded-circle border d-flex justify-content-center align-items-center overflow-hidden" style="width:100px;height:100px" alt="Avatar">
-                            <img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Tash-Alex-600x593-1.jpg" alt="" srcset="">
+                            <img class="img-fluid" src="https://growtourism.com/wp-content/uploads/2022/07/Tash-Alex-600x593-1.jpg" alt="" srcset="">
                         </div>
                     </div>
                     <p class="fw-bold">Tash McGill & Alex Dykman</p>
@@ -66,7 +63,7 @@ get_header(); ?>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
                 <div class="card border-0 shadow text-primary">
-                    <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-1.png" class="card-img-top" alt="...">
+                    <img src="https://growtourism.com/wp-content/uploads/2022/07/Our-courses-1.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Customer Experience/Commercials </h5>
                         <p class="card-text">
@@ -78,7 +75,7 @@ get_header(); ?>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
                 <div class="card border-0 shadow text-primary">
-                    <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-2.png" class="card-img-top" alt="...">
+                    <img src="https://growtourism.com/wp-content/uploads/2022/07/Our-courses-2.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Culture</h5>
                         <p class="card-text">Build the knowledge and skills needed to build deeply integrated culture within your team, helping to empower your business to engage and invest in the culture it is surrounded by. </p>
@@ -88,7 +85,7 @@ get_header(); ?>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
                 <div class="card border-0 shadow text-primary">
-                    <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-3.png" class="card-img-top" alt="...">
+                    <img src="https://growtourism.com/wp-content/uploads/2022/07/Our-courses-3.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">People & Networks</h5>
                         <p class="card-text">Build an understanding of growth pathways, teamwork and professional growth, maximising talent and skills both within yourself and your team. </p>
@@ -98,7 +95,7 @@ get_header(); ?>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
                 <div class="card border-0 shadow text-primary">
-                    <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-4.png" class="card-img-top" alt="...">
+                    <img src="https://growtourism.com/wp-content/uploads/2022/07/Our-courses-4.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Sustainability</h5>
                         <p class="card-text">Develop the know-how to ensure high-value tourism leaves a greater positive impact on customers, communities and the environment through industry-leading best practice. </p>
@@ -108,7 +105,7 @@ get_header(); ?>
             </div>
             <div class="col-sm-6 col-lg-4 mb-3">
                 <div class="card border-0 shadow text-primary">
-                    <img src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/Our-courses-5.png" class="card-img-top" alt="...">
+                    <img src="https://growtourism.com/wp-content/uploads/2022/07/Our-courses-5.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Future legacy</h5>
                         <p class="card-text">Explore best practice business planning and strategy to develop your ability to think ahead of the next curveball and build a resilient, future-focused tourism business. </p>
@@ -184,7 +181,7 @@ get_header(); ?>
                 <a class="btn btn-primary btn-lg rounded-pill mt-2" href="/high-value-tourism/">Learn more <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
             <div data-aos="fade-up" class="col-md-6">
-                <img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/feature-courses-page.png" alt="" srcset="">
+                <img class="img-fluid" src="https://growtourism.com/wp-content/uploads/2022/08/feature-courses-page.png" alt="" srcset="">
             </div>
         </div>
     </div>
@@ -205,15 +202,15 @@ get_header(); ?>
         <h1 class="fw-normal">Are you ready <strong>for the future</strong></h1>
         <p>We see a world where New Zealand’s tourism workforce is well-equipped to serve the traveller of the future with sustainable, high-value tourism experiences. A workforce enabled to build long-term career paths, contributing higher value to industry and making local impact on communities. </p>
         <div data-aos="fade-up" class="row counters pt-2">
-            <div class="col-md-4 counter px-3">
+            <div class="col-md-4 counter px-3 mb-2 mb-md-0">
                 <h2>1 in 3</h2>
                 <small>New jobs will be in tourism globally in the next 12 months <i>- World Travel & Tourism Council</i></small>
             </div>
-            <div class="col-md-4 counter px-3">
+            <div class="col-md-4 counter px-3 mb-2 mb-md-0">
                 <h2>43%</h2>
                 <small>Said talent retention is the #1 challenge employers are facing right now <i>- LinkedIn Talent Solutions Survey</i></small>
             </div>
-            <div class="col-md-4 counter px-3">
+            <div class="col-md-4 counter px-3 mb-2 mb-md-0">
                 <h2>#1</h2>
                 <small>“A career pathway” #1 thing to attract and retain tourism professionals <i>- Hinonga Koriri,2019</i></small>
             </div>
@@ -232,7 +229,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="col-md-6" style="background-image:url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/contact-Image.png);background-size: cover;background-repeat: no-repeat;">
+        <div class="col-md-6" style="background-image:url(https://growtourism.com/wp-content/uploads/2022/07/contact-Image.png);background-size: cover;background-repeat: no-repeat;">
         </div>
     </div>
 

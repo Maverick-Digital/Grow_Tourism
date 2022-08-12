@@ -19,7 +19,7 @@ const Listing = ({list}) => {
                     </h4>
                   </header>
                   <div className="card-text entry-content">
-                    <div className="course-summary d-flex mb-1">
+                    <div className="course-summary d-md-flex mb-1 align-items-start">
                       {
                         !isEmpty(list.categories) && (
                           <div className="d-flex align-items-center me-2">
@@ -35,7 +35,7 @@ const Listing = ({list}) => {
                       {
                         !isEmpty(list.duration) && (
                           <div className="d-flex align-items-center me-2">
-                            <div className="category-wrap small ms-1">
+                            <div className="category-wrap small ms-md-1">
                               <span className="category-title text-uppercase small">Duration<br /></span>
                               <span>{list.duration}</span>
                             </div>
@@ -45,7 +45,7 @@ const Listing = ({list}) => {
                       {
                         !isEmpty(list.levels) && (
                           <div className="d-flex align-items-center me-2">
-                            <div className="category-wrap small ms-1">
+                            <div className="category-wrap small ms-md-1">
                               <span className="category-title text-uppercase small">Level<br /></span>
                               <span>{list.levels.map((level, index, arr) => 
                                 <span key={index}><label dangerouslySetInnerHTML={{__html:level.name}}></label>
@@ -68,10 +68,10 @@ const Listing = ({list}) => {
                     {
                       !isEmpty(list.link) && (
                         <a href={list.link} 
-                          className="btn btn-sm px-2 btn-primary rounded-pill mx-1">See course overview</a>
+                          className="btn btn-sm px-2 btn-primary rounded-pill mx-1 mb-2 mb-xl-0">See course overview</a>
                       )
                     }
-                    <a className="btn btn-sm px-2 btn-primary rounded-pill mx-1" href="">Add to curriculum</a>
+                    <a className="btn btn-sm px-2 btn-primary rounded-pill mx-1 mb-2 mb-xl-0" href="">Add to curriculum</a>
                   </footer>
                 </div>
               </div>

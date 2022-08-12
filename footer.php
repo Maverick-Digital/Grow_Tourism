@@ -16,8 +16,8 @@
 			<footer class="pt-4" id="footer">
 				<div class="container text-primary">
 					<div class="row pb-3">
-						<div class="col-md-4 col-lg-6">
-							<div class="company-details">
+						<div class="col-md-4 col-lg-6  text-center text-md-start">
+							<div class="company-details  mb-2 mb-md-0">
 								<?php
 								dynamic_sidebar('third_widget_area');
 
@@ -30,9 +30,9 @@
 							</div>
 						</div>
 
-						<div class="col-md-8 col-lg-6">
+						<div class="col-md-8 col-lg-6  text-center text-md-start">
 							<div class="row g-0">
-								<div class="col-md-5">
+								<div class="col-md-5 mb-2 mb-md-0">
 									<?php
 									dynamic_sidebar('fourth_widget_area');
 
@@ -43,7 +43,7 @@
 									endif;
 									?>
 								</div>
-								<div class="col-md-5">
+								<div class="col-md-5  mb-2 mb-md-0">
 									<?php
 									dynamic_sidebar('fifth_widget_area');
 

@@ -626,7 +626,7 @@ function getFilteredOptionsTaxonomy()
       $postTitle = $itemData->post_title;
 			$categoryTerms = get_the_terms($postID, 'pillar');
 			$levelTerms = get_the_terms($postID, 'level');
-      $postImage = get_the_post_thumbnail_url($postID, "large");
+      $postImage = get_the_post_thumbnail_url($postID, "medium_large");
       $duration = get_field('duration', $postID);
       $courseOverview = get_field('course_overview', $postID);
       $intro = get_field('intro', $postID);

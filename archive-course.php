@@ -32,12 +32,12 @@ if (have_posts()) :
 <?php
  
 if ( is_user_logged_in() ) { ?>
-  // Show Post to Logged in User
+  
   <div class="container">
   <div id="course-div"></div>
 <?php } 
 else { ?>
-  //Show password field
+  
   <div class="container">
   <h1 class="mt-4">please click the below link login to access this page</h1>
 	<a href="/wp-login.php/">click</a>
@@ -57,8 +57,25 @@ endif;
 wp_reset_postdata(); // End of the loop. 
 	?>
 	</div>
+<!-- 
+	<div class="join-us">
+    <div class="row g-0">
+        <div class="col-md-6 background-gradiant">
+            <div class="join-us-form p-2 p-md-3 p-lg-4 text-white">
+                <h1 class="fw-normal">Join the <strong> movement</strong></h1>
+                <p>Sign up and be a part of the Grow Tourism movement. <strong>Launching March 2023</strong></p>
+                <div class="from-wrapper mt-3">
+                    <?php echo do_shortcode('[gravityform id="1" title="false" description="false"]'); ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="background-image:url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/contact-Image.png);background-size: cover;background-repeat: no-repeat;">
+        </div>
+    </div>
 
-	<div class="syllabus background-gradiant text-white">
+</div> -->
+
+	<!-- <div class="syllabus background-gradiant text-white">
 		<div class="container py-5">
 			<div class="row">
 				<div class="col-md-4">
@@ -101,6 +118,6 @@ wp_reset_postdata(); // End of the loop.
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<?php get_footer(); ?>

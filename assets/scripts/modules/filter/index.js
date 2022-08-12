@@ -15,6 +15,12 @@ const Filter = () => {
   const [origListings, setOrigListings] = useState([]);
   const [filteredListings, setFilteredListings] = useState([]);
 
+  const [showFilter, setShowFilter] = useState(true);
+
+  const triggerShowFilter = (value) => {
+    setShowFilter(value);
+  }
+
   const updateKeyword = (keyword) => {
     if (!isEmpty(keyword)) {
       const smallKeyword = keyword.toLowerCase();
@@ -101,8 +107,10 @@ const Filter = () => {
           <Filters 
             updateKeyword={updateKeyword}
             triggerFetchListings={changeFilterFunc}
+            showFilter={showFilter}
           />
           <List 
+            triggerShowFilter={triggerShowFilter}
             listings={listings} 
             setLoadItems={setLoadItems} 
             isLoading={isLoading}

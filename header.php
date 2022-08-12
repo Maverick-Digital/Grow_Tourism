@@ -54,12 +54,12 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 						</a> -->
 
 					<div id="navbar" class="collapse navbar-collapse flex-grow-0 align-items-end">
-						<div class="d-md-flex flex-column align-items-end">
+						<div class="d-md-flex flex-column align-items-end full-height-menu-mobile">
 
 							<div class="d-md-flex mb-md-2 align-items-center social-icons-header">
 								<div class="text-center my-sm-1 my-md-0 social-icons-wrap">
 									<a target="_blank" href="https://www.linkedin.com/company/grow-tourism/" class="fs-5 text pe-2"><i class="fa-brands fa-linkedin"></i></a>
-									<a target="_blank" href="" class="fs-5 text pe-2"><i class="fab fa-instagram-square"></i></a>
+									<a target="_blank" href="https://www.instagram.com/growtourism/" class="fs-5 text pe-2"><i class="fab fa-instagram-square"></i></a>
 								</div>
 								<?php
 
@@ -120,10 +120,10 @@ $search_enabled  = get_theme_mod('search_enabled', '1'); // Get custom meta-valu
 					<div data-aos="fade-up" class="">
 						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/1.png" alt="" srcset="">
 					</div>
-					<div data-aos="fade-up" class="">
+					<div data-aos="fade-up" class="d-none d-md-block">
 						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/5-1.png" alt="" srcset="">
 					</div>
-					<div data-aos="fade-up" class="">
+					<div data-aos="fade-up" class="d-none d-md-block">
 						<img class="img-fluid" src="https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/6.png" alt="" srcset="">
 					</div>
 					<div data-aos="fade-up" class="">

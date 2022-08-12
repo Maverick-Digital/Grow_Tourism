@@ -41435,7 +41435,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var Filters = function Filters(_ref) {
   var updateKeyword = _ref.updateKeyword,
-      triggerFetchListings = _ref.triggerFetchListings;
+      triggerFetchListings = _ref.triggerFetchListings,
+      showFilter = _ref.showFilter;
 
   var _useState = (0, _react.useState)(window.FiltersTaxonomy.category),
       _useState2 = _slicedToArray(_useState, 2),
@@ -41457,12 +41458,16 @@ var Filters = function Filters(_ref) {
       levelsSet = _useState8[0],
       setLevelsSet = _useState8[1];
 
+  var _useState9 = (0, _react.useState)(true),
+      _useState10 = _slicedToArray(_useState9, 2),
+      show = _useState10[0],
+      setShow = _useState10[1];
+
   var handleCategoryChange = function handleCategoryChange(e) {
     var selectedCategories = e.target.checked ? [].concat(_toConsumableArray(categoriesSet), [e.target.value]) : categoriesSet.filter(function (item) {
       return item !== e.target.value;
     });
     setCategoriesSet(selectedCategories);
-    triggerFetchListings(selectedCategories, levelsSet);
   };
 
   var handleLevelChange = function handleLevelChange(e) {
@@ -41470,21 +41475,26 @@ var Filters = function Filters(_ref) {
       return item !== e.target.value;
     });
     setLevelsSet(selectedLevels);
-    triggerFetchListings(categoriesSet, selectedLevels);
   };
 
   (0, _react.useEffect)(function () {}, []);
 
   var onInputChange = function onInputChange(e) {
-    var value = e.target.value; // if (value.length > 4) {
+    var value = e.target.value;
+    updateKeyword(value);
+  };
 
-    updateKeyword(value); // }
+  var doFilter = function doFilter(e) {
+    e.preventDefault();
+    triggerFetchListings(categoriesSet, levelsSet);
   };
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "col-md-3 text-primary course-filter"
-  }, /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "search-wrap mb-3"
+    className: "col-md-3 text-primary course-filter "
+  }, /*#__PURE__*/_react.default.createElement("form", {
+    className: showFilter ? '' : 'hide-filter'
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "search-wrap mb-3 "
   }, /*#__PURE__*/_react.default.createElement("h5", null, "Filter & Search"), /*#__PURE__*/_react.default.createElement("input", {
     onChange: onInputChange,
     className: "form-control mb-2 rounded-pill border-primary border-2 w-75 text-primary",
@@ -41530,7 +41540,11 @@ var Filters = function Filters(_ref) {
       className: "form-check-label",
       htmlFor: "flexCheckLevels_".concat(level.id)
     }, level.title));
-  }))))));
+  }))), /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
+    onClick: doFilter,
+    class: "btn btn-outline-pribmary"
+  }, "Filter"))));
 };
 
 var _default = Filters;
@@ -41576,7 +41590,7 @@ var Listing = function Listing(_ref) {
   }, list.title))), /*#__PURE__*/_react.default.createElement("div", {
     className: "card-text entry-content"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "course-summary d-flex mb-1 align-items-start"
+    className: "course-summary d-md-flex mb-1 align-items-start"
   }, !(0, _utils.isEmpty)(list.categories) && /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex align-items-center me-2"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -41594,13 +41608,13 @@ var Listing = function Listing(_ref) {
   })))), !(0, _utils.isEmpty)(list.duration) && /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex align-items-center me-2"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "category-wrap small ms-1"
+    className: "category-wrap small ms-md-1"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "category-title text-uppercase small"
   }, "Duration", /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("span", null, list.duration))), !(0, _utils.isEmpty)(list.levels) && /*#__PURE__*/_react.default.createElement("div", {
     className: "d-flex align-items-center me-2"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "category-wrap small ms-1"
+    className: "category-wrap small ms-md-1"
   }, /*#__PURE__*/_react.default.createElement("span", {
     className: "category-title text-uppercase small"
   }, "Level", /*#__PURE__*/_react.default.createElement("br", null)), /*#__PURE__*/_react.default.createElement("span", null, list.levels.map(function (level, index, arr) {
@@ -41622,11 +41636,11 @@ var Listing = function Listing(_ref) {
     className: "entry-meta"
   }, !(0, _utils.isEmpty)(list.link) && /*#__PURE__*/_react.default.createElement("a", {
     href: list.link,
-    className: "btn btn-sm px-2 btn-primary rounded-pill mx-1"
+    className: "btn btn-sm px-2 btn-primary rounded-pill mx-1 mb-2 mb-xl-0"
   }, "See course overview"), /*#__PURE__*/_react.default.createElement("a", {
-    className: "btn btn-sm px-2 btn-primary rounded-pill mx-1",
+    className: "btn btn-sm px-2 btn-primary rounded-pill mx-1 mb-2 mb-xl-0",
     href: ""
-  }, "Add to learning pathway"))))))));
+  }, "Add to curriculum"))))))));
 };
 
 var _default = Listing;
@@ -41649,11 +41663,30 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var List = function List(_ref) {
   var loadItems = _ref.loadItems,
       setLoadItems = _ref.setLoadItems,
       isLoading = _ref.isLoading,
-      listings = _ref.listings;
+      listings = _ref.listings,
+      triggerShowFilter = _ref.triggerShowFilter;
+
+  var _useState = (0, _react.useState)(true),
+      _useState2 = _slicedToArray(_useState, 2),
+      show = _useState2[0],
+      setShow = _useState2[1];
+
   var maxItems = 6;
 
   var loadMoreBtn = function loadMoreBtn(e) {
@@ -41664,6 +41697,13 @@ var List = function List(_ref) {
   (0, _react.useEffect)(function () {
     setLoadItems(6);
   }, []);
+
+  var hideFilter = function hideFilter(e) {
+    e.preventDefault();
+    triggerShowFilter(!show);
+    setShow(!show);
+  };
+
   var button;
 
   if (listings.length >= loadItems) {
@@ -41687,7 +41727,11 @@ var List = function List(_ref) {
       className: "entry-header"
     }, /*#__PURE__*/_react.default.createElement("h1", {
       className: "entry-header"
-    }, "Courses hub"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."))), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Oops...")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Sorry! We found no results. Try broadening your search."))));
+    }, "Courses hub"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."), /*#__PURE__*/_react.default.createElement("button", {
+      type: "button",
+      onClick: hideFilter,
+      className: "btn btn-outline-pribmary btn-lg mx-auto w-100"
+    }, show ? /*#__PURE__*/_react.default.createElement("span", null, "Show Filter") : /*#__PURE__*/_react.default.createElement("span", null, "Hide Filter")))), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Oops...")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("strong", null, "Sorry! We found no results. Try broadening your search."))));
   } else {
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
       className: "col-md-9"
@@ -41697,7 +41741,11 @@ var List = function List(_ref) {
       className: "entry-header"
     }, /*#__PURE__*/_react.default.createElement("h1", {
       className: "entry-header"
-    }, "Courses hub"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."))), !isLoading && listings.length > 0 && listings.slice(0, loadItems).map(function (list, index) {
+    }, "Courses hub"), /*#__PURE__*/_react.default.createElement("p", null, "Select from individual courses or let us build your own curriculum."), /*#__PURE__*/_react.default.createElement("button", {
+      type: "button",
+      onClick: hideFilter,
+      className: "btn btn-outline-pribmary btn-lg mx-auto w-100 d-block d-md-none"
+    }, show ? /*#__PURE__*/_react.default.createElement("span", null, "Show Filter") : /*#__PURE__*/_react.default.createElement("span", null, "Hide Filter")))), !isLoading && listings.length > 0 && listings.slice(0, loadItems).map(function (list, index) {
       return /*#__PURE__*/_react.default.createElement(_listing.default, {
         key: index,
         list: list
@@ -41779,6 +41827,15 @@ var Filter = function Filter() {
       _useState10 = _slicedToArray(_useState9, 2),
       filteredListings = _useState10[0],
       setFilteredListings = _useState10[1];
+
+  var _useState11 = (0, _react.useState)(true),
+      _useState12 = _slicedToArray(_useState11, 2),
+      showFilter = _useState12[0],
+      setShowFilter = _useState12[1];
+
+  var triggerShowFilter = function triggerShowFilter(value) {
+    setShowFilter(value);
+  };
 
   var updateKeyword = function updateKeyword(keyword) {
     if (!(0, _utils.isEmpty)(keyword)) {
@@ -41878,8 +41935,10 @@ var Filter = function Filter() {
     className: "row g-3"
   }, /*#__PURE__*/_react.default.createElement(_filters.default, {
     updateKeyword: updateKeyword,
-    triggerFetchListings: changeFilterFunc
+    triggerFetchListings: changeFilterFunc,
+    showFilter: showFilter
   }), /*#__PURE__*/_react.default.createElement(_list.default, {
+    triggerShowFilter: triggerShowFilter,
     listings: listings,
     setLoadItems: setLoadItems,
     isLoading: isLoading,
@@ -42058,7 +42117,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

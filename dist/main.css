@@ -10843,7 +10843,7 @@ header .btn-light {
 }
 
 .home-header {
-  background-image: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/main-header-background.jpg);
+  background-image: url(https://growtourism.com/wp-content/uploads/2022/07/main-header-background.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -10889,7 +10889,7 @@ header .btn-light {
 }
 .background-gradiant::after {
   content: "";
-  background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/overlay-pattern.png);
+  background: url(https://growtourism.com/wp-content/uploads/2022/08/overlay-pattern.png);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -10933,7 +10933,7 @@ header .btn-light {
 }
 .testimonial blockquote::before {
   content: "";
-  background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/quetation-left.svg);
+  background: url(https://growtourism.com/wp-content/uploads/2022/07/quetation-left.svg);
   background-repeat: no-repeat;
   font-size: x-large;
   position: absolute;
@@ -10943,7 +10943,7 @@ header .btn-light {
 }
 .testimonial blockquote::after {
   content: "";
-  background: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/07/quetation-right.svg);
+  background: url(https://growtourism.com/wp-content/uploads/2022/07/quetation-right.svg);
   background-repeat: no-repeat;
   font-size: x-large;
   position: absolute;
@@ -11181,7 +11181,7 @@ header .btn-light {
 }
 
 .floter-thread {
-  background-image: url(https://wordpress-572332-2777368.cloudwaysapps.com/wp-content/uploads/2022/08/background-image-thread.svg);
+  background-image: url(https://growtourism.com/wp-content/uploads/2022/08/background-image-thread.svg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -11378,6 +11378,7 @@ header .btn-light {
 .course-archive .img-fluid-course-archive {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 .course-archive .category-title {
   font-weight: 600;
@@ -11404,6 +11405,30 @@ header .btn-light {
   color: #7055aa;
 }
 
+.contact-us-block .gform_wrapper.gravity-theme .gfield textarea.large {
+  height: 112px;
+  background: transparent;
+  border: 2px solid #7055aa;
+}
+.contact-us-block .gform_wrapper.gravity-theme .ginput_complex input, .contact-us-block .gform_wrapper.gravity-theme .ginput_complex select {
+  background: transparent;
+  border: 2px solid #7055aa;
+}
+.contact-us-block .gform_wrapper.gravity-theme .gfield input.large, .contact-us-block .gform_wrapper.gravity-theme .gfield select.large {
+  background: transparent;
+  border: 2px solid #7055aa;
+}
+.contact-us-block .gform_wrapper.gravity-theme .ginput_complex label {
+  display: none;
+}
+.contact-us-block .gform_wrapper.gravity-theme .gform_footer button, .contact-us-block .gform_wrapper.gravity-theme .gform_footer input, .contact-us-block .gform_wrapper.gravity-theme .gform_page_footer button, .contact-us-block .gform_wrapper.gravity-theme .gform_page_footer input {
+  background-color: #7055aa;
+  border: none;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 50px;
+}
+
 /**
  * Responsive Design using "mixins/_breakpoints.scss"
  */
@@ -11413,6 +11438,37 @@ header .btn-light {
   }
   .counter {
     border-right: 0 !important;
+  }
+  .social-media {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .full-height-menu-mobile {
+    height: 100vh;
+  }
+  .full-height-menu-mobile li {
+    font-size: x-large;
+    line-height: 4rem;
+  }
+  .course-archive footer a {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+  .course-archive .hide-filter {
+    display: block;
+  }
+  .course-archive form {
+    display: none;
+  }
+  .blog-post-wrap .card::after {
+    content: "";
+    width: 100%;
+    border-bottom: 0.13em solid #bcb2d2;
+    border-bottom-style: dashed;
+    margin: 10px 0;
+  }
+  .home-header {
+    background-image: url(https://growtourism.com/wp-content/uploads/2022/08/hero-header-back-ground-mobile_.png);
   }
 }
 @media (max-width: 767.98px) {
@@ -11433,6 +11489,13 @@ header .btn-light {
   }
   .social-icons-wrap a:last-child {
     padding-right: 0 !important;
+  }
+  .blog-post-wrap .card::after {
+    content: "";
+    width: 100%;
+    border-bottom: 0.13em solid #bcb2d2;
+    border-bottom-style: dashed;
+    margin: 10px 0;
   }
 }
 
